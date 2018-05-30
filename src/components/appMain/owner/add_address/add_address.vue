@@ -10,25 +10,25 @@
             <ul>
                 <li>
                     <label for="add_name">收货人</label>
-                    <input type="text" id="add_name" placeholder="收件人名字" @change="confrom_name"  :value="changeaddress.name"/>
+                    <input type="text" id="add_name" placeholder="收件人名字" @change="confrom_name"  :value="changeaddress.receiver"/>
                     <i class="icon-gouxuan1 iconfont" v-show="user_name.length>0 && user_name != 'false'"></i>
                     <i class="icon-shanchu1 iconfont" v-show="user_name == 'false'"></i>
                 </li>
                  <li>
                     <label for="add_num" >联系方式</label>
-                    <input type="number" id="add_num"  placeholder="手机号码"  @change="confrom_name"  :value="changeaddress.inum"/>
+                    <input type="number" id="add_num"  placeholder="手机号码"  @change="confrom_name"  :value="changeaddress.ipNumber"/>
                    
                     <i class="icon-gouxuan1 iconfont"  v-show="user_num.length>0 && user_num != 'false'"></i>
                     <i class="icon-shanchu1 iconfont" v-show="user_num == 'false'"></i>
                 </li>
                  <li>
                     <label>所在地区</label>
-                    <input type="text" id="big_city" :value="changeaddress.city_paths" disabled   placeholder="请选择所在地区"  />
+                    <input type="text" id="big_city" :value="changeaddress.city" disabled   placeholder="请选择所在地区"  />
                     <i class="icon-jiantou1 iconfont" @click="showcase"></i>
                 </li>
                  <li>
                     <label for="add_spa">详细地址</label>
-                    <input type="text" id="add_spa"  placeholder="街道，楼牌号等"  @change="confrom_name" :value="changeaddress.small_city" />
+                    <input type="text" id="add_spa"  placeholder="街道，楼牌号等"  @change="confrom_name" :value="changeaddress.address_detail" />
              
                     <i class="icon-gouxuan1 iconfont" v-show="user_path.length>0 && user_path != 'false'"></i>
                     <i class="icon-shanchu1 iconfont" v-show="user_path == 'false'"></i>
@@ -114,18 +114,21 @@ export default {
       //是否默认地址
       statusadd: true,
       //需要编辑的地址
-      changeaddress: {}
+      changeaddress: {},
+      changeid:''
     };
   },
   //初始化是判断有没有参数
   mounted() {
-    if (this.$store.state.address.address_state.name) {
+    if (this.$store.state.address.address_state.receiver) {
       this.changeaddress = this.$store.state.address.address_state;
-      this.user_name = this.changeaddress.name;
-      this.user_num = this.changeaddress.inum;
-      this.big_city = this.changeaddress.city_paths;
-      this.user_path = this.changeaddress.small_city;
-      this.statusadd = this.changeaddress.acquiesce;
+      this.user_name = this.changeaddress.receiver;
+      this.user_num = this.changeaddress.ipNumber;
+      this.big_city = this.changeaddress.city;
+      this.user_path = this.changeaddress.address_detail;
+      this.statusadd = this.changeaddress.status;
+      this.changeid = this.changeaddress.address_id
+  
     }
   },
 
@@ -217,7 +220,7 @@ export default {
     //大区域验证
     big_citys() {
       this.big_city = this.livecity + this.livedistrict + this.livepath;
-      this.changeaddress.city_paths =
+      this.changeaddress.city =
         this.livecity + this.livedistrict + this.livepath;
     },
 
@@ -234,7 +237,7 @@ export default {
             this.user_name = "false";
           } else {
             this.user_name = _value;
-            this.changeaddress.name = _value;
+            this.changeaddress.receiver = _value;
           }
           break;
         case "add_num":
@@ -242,7 +245,7 @@ export default {
             this.user_num = "false";
           } else {
             this.user_num = _value;
-            this.changeaddress.inum = _value;
+            this.changeaddress.ipNumber = _value;
           }
           break;
 
@@ -251,7 +254,7 @@ export default {
             this.user_path = "false";
           } else {
             this.user_path = _value;
-            this.changeaddress.small_city = _value;
+            this.changeaddress.address_detail = _value;
           }
           break;
       }
@@ -269,16 +272,18 @@ export default {
         this.user_path.length > 0 &&
         this.user_path != "flase"
       ) {
-        console.log(66);
+        
         http
           .post("addAddress", {
             receiver: this.user_name,
             ipNumber: this.user_num,
             city: this.livecity + this.livedistrict + this.livepath,
             address_detail: this.user_path,
-            status: this.statusadd
+            status: this.statusadd,
+            address_id:this.changeid
           })
           .then(res => {
+            console.log(res)
             e.target.style.background = "green";
             e.target.innerHTML = "添加地址成功";
             setTimeout(() => {
