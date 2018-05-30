@@ -1,0 +1,211 @@
+#shopcar{
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    .shopcar_top{
+        height: 100px;
+        display:flex;
+        align-items:center;
+        .toback{
+            font-size:54px;
+            height: 48px;
+            width: 30%;
+            margin-left: 2%;
+        }
+        .title{
+            font-size:32px;
+            height: 48px;
+            width: 40%;
+            text-align:center;
+        }
+        .profit{
+            font-size:26px;
+            height: 48px;
+            line-height: 48px;
+            width: 15%;
+            text-align:center;
+        }
+        .edit{
+            font-size:26px;
+            height: 48px;
+            line-height: 48px;
+            width: 15%;
+            text-align:center;
+        }
+    }
+    .logintip{
+        height: 90px;
+        background-color: rgba(35,35,33,.8);
+        padding:0 90px 30px;
+        color:#fff;
+        display:flex;
+        line-height: 90px;
+        font-size:26px;
+        align-items:center;
+        .txt{
+            height: 48px;
+        }
+        .tologin{
+            margin-left:20px;
+            height: 48px;
+            padding:0 24px 0 10px;
+        }
+    }
+    .shopcar_main{
+        flex:1;
+        overflow-x:hidden;
+        background-color: #f4f4f1;
+        .car_list{
+            .list_item{
+                margin:10px 10px 0 10px;
+                background-color: #FFF;
+                display:flex;
+                align-items:center;
+                padding:0 40px 40px 40px;
+                .list_cont{
+                    width: 100%;
+                    display:flex;
+                    align-items:center;
+                    .list_label{
+                        .list_input{
+                            display:none;
+                        }
+                        .listInput{
+                            background-color:#fff;
+                            border:1px solid rgba(0,0,0,0.2);
+                            border-radius:100%;
+                            display:inline-block;
+                            height:30px;
+                            margin-right:10px;
+                            margin-top:-1px;
+                            vertical-align:middle;
+                            width:30px;
+                            line-height:1;
+                        }
+                        .list_input:checked + .listInput:after{
+                            background-color:#3e3e3e;
+                            border-radius:100%;content:"";
+                            display:inline-block;
+                            height:22px;margin:3px;
+                            width:22px;
+                        }
+                    }
+                    img{
+                        margin-right: 40px;
+                    }
+                    .cont{
+                        position:relative;
+                        h3{
+                            font-size: 0.32rem;
+                            overflow: hidden;
+                        }
+                        .params{
+                            line-height: 0.32rem;
+                            color: #999;
+                            overflow: hidden;
+                            margin-top: 0.4rem;
+                        }
+                        .price{
+                            margin-top: 45px;
+                            span{
+                                font-size: 0.42667rem;
+                            }
+                        }
+                        .qty{
+                            position:absolute;
+                            right: 0;
+                            bottom:0;
+                        }
+                        .edit-qty{
+                            margin-bottom: -5px;
+                            .reduce{
+                                display:inline-block;
+                                width: 36px;
+                                height: 20px;
+                                background: url("//static.360buyimg.com/tp-statics/2018-5-25/m/img/button_reduce_normal@2x.png") 0 no-repeat;
+                                -webkit-background-size: .26667rem .26667rem;
+                                background-size: .26667rem .26667rem;
+                            }
+                            .add{
+                                display:inline-block;
+                                width: 36px;
+                                height: 20px;
+                                background: url("//static.360buyimg.com/tp-statics/2018-5-25/m/img/button_add_normal@2x.png") right no-repeat;
+                                -webkit-background-size: .26667rem .26667rem;
+                                background-size: .26667rem .26667rem;
+                            }
+                            input{
+                                display: inline-block;
+                                border:1px solid #000;
+                                width: 50px;
+                                height: 50px;
+                                line-height: 50px;
+                                text-align: center;
+                                font-size: .32rem;
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .shopcar_footer{
+        height: 100px;
+        display:flex;
+        background-color: #232321;
+        justify-content:space-between;
+        align-items:center;
+        .list_label{
+            .list_input{
+                display:none;  
+            }
+            .listInput{
+                background-color:#fff;
+                border:4px solid rgba(0,0,0,0.4);
+                border-radius:100%;
+                display:inline-block;
+                height:30px;
+                margin-right:10px;
+                margin-top:-1px;
+                vertical-align:middle;
+                width:30px;
+                line-height:1;
+                margin-left: 30px;
+                z-index:10;
+            }
+            .list_input:checked + .listInput:after{
+                background-color:#c0a369;
+                border-radius:100%;content:"";
+                display:inline-block;
+                height:18px;margin:2px;
+                width:18px;
+            }
+            .all_check{
+                color:#fff;
+            }    
+        }
+        .total{
+            color:#fff;
+            .pay{
+                span{
+                    font-size:32px;
+                }
+            }
+        }
+        .toOrder{
+            width:30%;
+            color:#000;
+            text-align:center;
+            line-height: 100px;
+            font-size:32px;
+        }
+        .check{
+            background-color: #c0a369;
+        }
+        .nocheck{
+            background-color: #999;
+        }
+    }
+}
