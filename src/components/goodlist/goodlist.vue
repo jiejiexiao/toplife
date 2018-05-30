@@ -17,7 +17,7 @@
             </div>
             <div class="content"></div>
         </main>
-        <transition name="fade">
+        <transition name="faded">
             <div class="selectOption" v-if="select" key="select">
                 <div class="title">
                     <div class="btn">
@@ -26,7 +26,18 @@
                     <div class="cont">筛选</div>
                     <div class="btn"></div>
                 </div>
-                <div class="order"></div>
+                <div class="order">
+                    <h1>排序</h1>
+                    <ul>
+                        <li :class="{active:(option == 0)}" @click="tabChange(0)">综合</li>
+                        <li :class="{active:(option == 1)}" @click="tabChange(1)">价格（从高到低）</li>
+                        <li :class="{active:(option == 2)}" @click="tabChange(2)">价格（从低到高）</li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <div class="cancel btn">取消</div>
+                    <div class="confirm btn">确认</div>
+                </div>
             </div>
         </transition>
         <transition name="animate">
@@ -43,7 +54,8 @@
         data(){
             return {
                 overlay:false,
-                select:false
+                select:false,
+                option:0
             }
         },
         methods:{
@@ -57,6 +69,9 @@
             optionBack(){
                 this.overlay = false;
                 this.select = false;
+            },
+            tabChange(num){
+                this.option = num;
             }
         },
         mounted(){

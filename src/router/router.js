@@ -12,17 +12,17 @@ import BrandComponent from '../components/appMain/brand/brand'
 //分类
 import ClassifyComponent from '../components/appMain/classify/classify'
 //个人中心
-import OwnerComponent from '../components/appMain/owner/owner'
-import AccountComponent from '../components/appMain/owner/account/account'
+import OwnerComponent from '../components/appMain/owner/owner.vue'
+import AccountComponent from '../components/appMain/owner/account/account.vue'
 import AddressComponent from '../components/appMain/owner/address/address.vue'
-import Add_addressComponet from '../components/appMain/owner/add_address/add_address'
+import Add_addressComponet from '../components/appMain/owner/add_address/add_address.vue'
 
 //列表页
 import GoodlistComponent from '../components/goodlist/goodlist.vue'
 
 //注册登录
-import LoginComponent from '../components/login/login'
-import RegisterComponent from '../components/register/register'
+import LoginComponent from '../components/login/login.vue'
+import RegisterComponent from '../components/register/register.vue'
 
 const router = new VueRouter({
     routes : [

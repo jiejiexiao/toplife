@@ -109,7 +109,7 @@
 
 <script type="text/javascript">
 import "./owner.scss";
-
+  
 export default {
     data() {
         return {

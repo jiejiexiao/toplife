@@ -26,7 +26,7 @@
         },
         methods:{
             returnBack(){
-                window.history.back();
+                this.$router.push({name:'classroom'});
             },
         },
         computed:{
