@@ -111,6 +111,45 @@
         }
    }
 
-
+   .del_comfig{
+       position: absolute;
+    
+       top: 0;
+       left: 0;
+       z-index: 666;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0,0,0,.3);
+       .del_box{
+          
+           position: absolute;
+           border-radius: 15px;
+           width: 300px;
+           height: 200px;
+           background-color: #333333;
+           left: 50%;
+           top: 50%;
+           text-align: center;
+           transform: translate(-50%,-50%);
+           h2{
+               line-height: 95px;
+               color: #C4A66A;
+               margin-bottom: 10px;
+           }
+           h3{
+               line-height: 80px;
+               display: flex;
+               justify-content: space-around;
+               
+               span{
+                   display: inline-block;
+                   width: 30%;
+                 
+                   border-radius: 8px;
+                   background-color:#C4A66A;
+               }
+           }
+       }
+   }
 }
 

@@ -1,10 +1,11 @@
 import Vue from 'vue';
-
+import http from '../../../../utils/httpclient'
 
 const state = {
     //要修改的地址
-    address_state: {}
-
+    address_state: {},
+    addlist:[],
+    del_comfigs:false
 }
 
 const mutations = {
@@ -22,9 +23,27 @@ const actions = {
         //这里是使用common来触发上面的login_send方法
         //params是我传进来的参数
         // store.commit('change_add',params)
-        console.log(params, 111)
+       
         store.state.address_state = params;
+    },
+    showdata:(store)=>{
+        http.post('showAddress').then((res)=>{
+        
+            store.state.addlist = res.data 
+            console.log(store.state.addlist)
+            
+          })
+    },
+    //del删除
+    del_addre(store,params){
+        console.log(params,555)
+        http.post('del_address',{address_id:params}).then((res)=>{
+             store.state.addlist = res.status
+             store.state.del_comfigs =false;
+          })
     }
+
+
 }
 
 

@@ -39,7 +39,11 @@ const actions = {
                         store.state.lodingbox= false;
                          router.push({ name: 'home' })
                     }, 100)
-                    resolve(store.state.user_state)
+                    resolve(store.state.user_state);
+                    //发起请求返回用户信息
+                
+
+
                 } else {
                     setTimeout(() => { store.state.lodingbox = false; }, 100);
                     //怎样做
