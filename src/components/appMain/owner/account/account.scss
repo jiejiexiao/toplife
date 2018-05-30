@@ -1,0 +1,90 @@
+#account{
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: #F4F1F1;
+    width: 100%;
+    a{
+        text-decoration: none;
+    }
+    .account_top{
+        display: flex;
+        justify-content: space-between;
+        height: 110px;
+        background-color: white;
+        padding: 0 15px;
+        font-size: 38px;
+        line-height: 110px;
+        width: 100%;
+        border-bottom: 1px solid #D6D6D6;
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: #646464;
+            width: 50px;
+            i{
+                font-size: 40px;
+            }
+        }
+    }
+    .account_second{
+        height: 180px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding:20px 40px 30px 40px;
+        img{
+            width: 117px;
+            border-radius: 50%;
+        }
+        i{
+            display: inline-block;
+            margin-top: 50px;
+            font-size: 35px;
+            color: #646464;
+        }
+    }
+    .account_mian{
+        height: 810px;
+        width: 100%;
+        margin-top: 20px;
+        background-color: white;
+        ul{
+            width: 100%;
+            padding: 0 40px;
+            li{
+                display: flex;
+                justify-content: space-between;
+                height: 115px;
+                line-height: 115px;
+                font-size: 25px;
+               
+                border-bottom: 1px solid #D7D7D7;
+                a{
+                    color: #646464; 
+                    display: inline-block;
+                    width: 60px;
+                    text-align: right;
+                    i{
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+    .login_outbtn{
+        
+        position: absolute;
+        width: 100%;
+        line-height: 105px;
+        color: white;
+        bottom: 0;
+        height: 105px;
+        background-color: #232321;
+        font-size: 30px;
+        text-decoration: none;
+        text-align: center;
+    }
+}

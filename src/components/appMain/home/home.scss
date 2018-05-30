@@ -1,0 +1,21 @@
+#home{
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    // overflow-x:hidden;
+    .home_top{
+        height: 88px;
+        background: url("http://static.360buyimg.com/tp-statics/images/homeTop/logo.png") no-repeat center;
+        position:relative;
+        span{
+            position:absolute;
+            font-size:48px;
+            right:20px;
+            top:20px;
+        }
+    }
+    .home_main{
+        flex:1;
+        overflow-x:hidden;
+    }
+}

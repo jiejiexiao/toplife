@@ -1,0 +1,77 @@
+#classroom{
+    height: 100%;
+    overflow-x:hidden;
+    display:flex;
+    flex-direction:column;
+    .classroom_header{
+        height: 1.333333rem;
+        display:flex;
+        justify-content:space-between;
+        .btn{
+            width: 1.333333rem;
+            text-align:center;
+            img{
+                display:inline-block;
+                vertical-align:middle;
+                width: 0.6rem;
+                height: 0.586667rem;
+            }
+        }
+        .btn::after{
+            height: 100%;
+            display:inline-block;
+            content:"";
+            vertical-align:middle;
+        }
+        .btn_back{
+            img{width: 0.3rem}
+        }
+        .title{
+            width: 2.666667rem;
+            text-align:center;
+            color:#212121;
+            font-size:0.426667rem;
+        }
+        .title::after{
+            height: 100%;
+            display:inline-block;
+            content:"";
+            vertical-align:middle;
+        }
+    }
+    .classroom_main{
+        flex:1;
+        overflow:hidden;
+        position:relative;
+        ul{
+            top:0px;
+            position:absolute;
+            width: 100%;
+            li{
+                height: 2.666667rem;
+                background-repeat:no-repeat;
+                background-size:cover;
+                background-position:top center;
+                position:relative;
+                span{
+                    bottom:1.333333rem;
+                    position:absolute;
+                    width: 80%;
+                    text-align:center;
+                    left:50%;
+                    transform:translate(-50%,0);
+                    z-index: 114;
+                    height: .45333rem;
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: .37333rem;
+                    line-height: .45333rem;
+                    text-shadow: 0.013333rem 0.013333rem 0.04rem rgba(0,0,0,.9)
+                }
+            }
+            .active{
+                padding-top:7.333333rem;
+            }        
+        }
+    }
+}

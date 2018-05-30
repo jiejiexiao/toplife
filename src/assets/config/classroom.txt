@@ -1,0 +1,19 @@
+[{
+    "imgUrl":"http://img11.360buyimg.com/tuangou/s750x700_jfs/t19972/276/198464308/171978/affe4d9f/5aeadd95Na839ce2a.jpg!q75.webp",
+    "title":"名人私选 Choice"
+},{
+    "imgUrl":"http://img10.360buyimg.com/tuangou/s750x700_jfs/t17857/105/2224609759/125712/fc8e46c5/5aeadd6eN4b07a841.jpg!q75.webp",
+    "title":"生活家 Tastemaker"
+},{
+    "imgUrl":"http://img11.360buyimg.com/tuangou/s750x700_jfs/t18277/233/2209850557/223870/ae8bb81a/5aeabbeeNa5534144.jpg!q75.webp",
+    "title":"风格 Style"
+},{
+    "imgUrl":"http://img11.360buyimg.com/tuangou/s750x700_jfs/t16609/23/2243306550/196733/c77c18a3/5aed9512Ncee763cd.jpg!q75.webp",
+    "title":"城中热点 What's Hot"
+},{
+    "imgUrl":"http://img14.360buyimg.com/tuangou/s750x700_jfs/t19747/11/2334204923/203167/59fe484c/5aed9538N1e71cead.jpg!q75.webp",
+    "title":"品牌 Brand"
+},{
+    "imgUrl":"http://img14.360buyimg.com/tuangou/s750x700_jfs/t17368/66/2201570621/140556/80d7e74b/5aec244fN553d1fb0.jpg!q75.webp",
+    "title":"专题 Feature"
+}]

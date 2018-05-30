@@ -1,0 +1,145 @@
+#register{
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    font-family: "宋体";
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('https://plogin.m.jd.com/st_new/img/toplife/images/bg.png');
+    a{
+        text-decoration:none;
+    }
+    h3{
+        display: flex;
+        justify-content: space-between;
+        height: 1.16rem;
+       
+        padding-right: 0.6rem;
+
+        span{
+            display: inline-block;
+            width: 0.6667rem;
+        }
+        a{
+            display: inline-block;
+            height: 0.72rem;
+            margin-top: 0.4rem;
+            width: 0.8rem;
+            
+            i{
+                font-size: 0.6rem;
+                color: black;
+            }
+        }
+    }
+    .register_first{
+        height: 4rem;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        flex-direction: column;
+        img{
+            height: 1.9467rem;
+            align-self: center;
+        }
+        h5{
+            align-self: center;
+            line-height: 0.3333rem;
+            font-size: 0.28rem;
+            color: #141411;
+            span{
+                display: inline-block;
+                width: 0.48rem;
+                height: 0.04rem;
+                line-height: 0.3333rem;
+                margin: 0.1067rem 0.2667rem;
+                background-color: #DADADA;
+            }
+        }
+    }
+    .register_second{
+        height: 6rem;
+        padding:0 1.2rem;
+        .register_second_mian{
+            height: 1.2rem;
+            padding-top: 0.4667rem;
+            border-bottom: 0.0267rem solid #D6D5D5;
+            i{
+                font-size: 0.5333rem;
+                color: #31312F;
+                margin-top: 0.2rem;
+            }
+            input{
+                width: 6.6rem;
+                height: 100%;
+                font-size: 0.3333rem;
+                border:none;
+                background: transparent;
+            }
+        }
+        .register_btn{
+            display: inline-block;
+            height: 1.3333rem;
+            width: 100%;
+            background-color: #666666;
+            color: white;
+            text-align: center;
+            margin-top: 0.4rem;
+            font-size: 0.4rem;
+            line-height: 1.3333rem;
+        }
+        h4{
+            height: 1.3333rem;
+            font-family: "宋体";
+            display: flex;
+            font-size: 0.3733rem;
+            justify-content: space-between;
+            line-height: 1.3333rem;
+            a{
+              color: #626262;
+            }
+        }
+        h5{
+            margin-top: 0.2667rem;
+            line-height: 0.6rem;
+            height:0.6rem;
+            font-size: 0.3333rem;
+            color: #ADADAD;
+            font-size: 0.2933rem；
+            i{
+                
+                font-size: 0.5333rem;
+                margin-right: 0.2667rem;
+            }
+            span{
+                color: #222221;
+                text-decoration: underline;
+            }
+        }
+    }
+    .register_three{
+        display: flex;
+        justify-content: space-around;
+        height: 1.6rem;
+        width: 100%;
+      
+        margin-top: 2.5333rem;
+        a{
+            display:flex;
+            flex-direction: column;
+            color: black;
+            width:1.4667rem;
+            justify-content: center;
+            height: 100%;
+            i{
+                font-size: 1.2rem;               
+           }
+           .icon-weixin{
+            color: forestgreen;
+           }
+           .icon-sr_jingdong{
+               color: #B20000;
+           }
+        }
+    }
+}
