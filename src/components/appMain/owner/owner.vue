@@ -118,6 +118,7 @@ export default {
         };
     },
     mounted(){
+        this.$store.commit('tabChange')
         window.addEventListener('scroll', this.handleScroll,true);
     },
     methods:{
