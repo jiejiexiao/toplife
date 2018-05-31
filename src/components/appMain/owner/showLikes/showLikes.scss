@@ -1,0 +1,88 @@
+#showlike{
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+ 
+    width: 100%;
+    a{
+        text-decoration: none;
+    }
+    .showlike_top{
+        display: flex;
+        justify-content: space-between;
+        height: 1.4667rem;
+        background-color: white;
+        padding: 0 0.2rem;
+        font-size: 0.5067rem;
+        line-height: 1.4667rem;
+        width: 100%;
+        border-bottom: 0.0133rem solid #D6D6D6;
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: #646464;
+            width: 0.6667rem;
+            i{
+                font-size: 0.5333rem;
+            }
+        }
+    }
+    .showlike_mian{
+        flex: 1;
+        overflow-x: hidden;
+        
+        ul{
+            display: flex;
+            padding: 0 40px;
+            flex-direction: column;
+            li{
+                height: 290px;
+                display: flex;
+                justify-content: space-between;
+                padding: 40px 0;
+               
+                border-bottom: 1px solid #D5D4D4;
+                img{
+                    width: 205px;
+                    height: 205px;
+                    border: 2px solid #D5D4D4;
+                   
+                }
+                .show_box{
+                    width: 428px;
+                    height: 205px;
+                   
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    h5{
+                        line-height: 30px;
+                        margin: 0;
+                        font-size: 23px;
+                    }
+                    h3{
+                        line-height: 50px;
+                        display: flex;
+                        justify-content: space-between;
+                        a{
+                            display:inline-block;
+                            width: 180px;
+                            height: 46px;
+                            text-align: center;
+                            line-height: 46px;
+                            font-size: 22px;
+                            font-family: "宋体";
+                            color: #0E0E0B;
+                            border: 2px solid #545454;
+                        }
+                        span{
+                            font-family: serif;
+                        }
+                    }
+                }
+            }
+        }
+                
+    }
+}
