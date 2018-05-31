@@ -60,8 +60,9 @@
     .register_second{
         height: 6rem;
         padding:0 1.2rem;
-        .register_second_mian{
+        .register_second_mian,.register_second_yzm{
             height: 1.2rem;
+            position: relative;
             padding-top: 0.4667rem;
             border-bottom: 0.0267rem solid #D6D5D5;
             i{
@@ -72,12 +73,40 @@
             input{
                 width: 6.6rem;
                 height: 100%;
-                font-size: 0.3333rem;
+                font-size:0.3733rem;
                 border:none;
                 background: transparent;
             }
+            .icon-xuan,.icon-shanchu1{
+                position: absolute;
+                font-size: 45px;
+              
+                right: -55px;
+                top: 20px;
+            }
+            .icon-xuan{
+                color: green;
+            }
+            .icon-shanchu1{
+                color: red;
+            }
+
         }
-        .register_btn{
+        .register_second_yzm{
+             display: flex;
+             padding-top:0.2667rem;
+             padding-right: 0;
+             justify-content: space-between;
+        
+            input{
+                width:4.1067rem;
+                padding-left: 0.1733rem;
+                height: 100%;
+               
+            }
+           
+        }   
+        .register_btn,.register_btn1,.register_btn2{
             display: inline-block;
             height: 1.3333rem;
             width: 100%;
@@ -87,6 +116,9 @@
             margin-top: 0.4rem;
             font-size: 0.4rem;
             line-height: 1.3333rem;
+        }
+        .register_btn1,.register_btn2{
+            background-color: #B20000;
         }
         h4{
             height: 1.3333rem;

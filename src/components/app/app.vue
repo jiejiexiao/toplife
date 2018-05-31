@@ -7,6 +7,13 @@
     export default {
         mounted(){
             this.$store.commit('getDataSet');
+            this.$store.commit('set_Login');
+
+
+
+
+
+
         }
     }
 </script>

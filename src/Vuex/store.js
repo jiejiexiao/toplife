@@ -25,6 +25,17 @@ let mutations = {
             state.classroomshowData = res;
         })
     },
+    //获得用的登录信息
+    //设置登录信息
+    set_Login(){
+        //console.log(55)
+      //发起请求返回用户信息
+      http.post('islogin').then((res)=>{
+            if(res.status){
+                this.state.login.login_name = res.data;
+            }
+    })
+    },
     tabChange(){
         let name = window.location.hash.split('/');
         var arr = [];
