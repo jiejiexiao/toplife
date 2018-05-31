@@ -26,7 +26,7 @@
                   {{this.$store.state.login.login_name != '' ?this.$store.state.login.login_name: '立即登录' }}
               </router-link>
                 <p> {{this.$store.state.login.login_name != '' ?'您是银卡会员': '登录后可查看您的会员等级及权益 ' }}</p>
-                  <p> {{this.$store.state.login.login_name != '' ?'在消费20000元或单笔满10000元可升级为金卡会员': '' }}</p>
+                  <p> {{this.$store.state.login.login_name != '' ?'再消费20000元或单笔满10000元可升级为金卡会员': '' }}</p>
           </div>
           <div class="owner_third">
               <router-link to=""><img src="https://static.360buyimg.com/tp-statics/2018-5-25/m/img/ic_express_silver@2x.png" alt="">京尊达</router-link>
@@ -51,11 +51,11 @@
                       <router-link to=""> <i class="iconfont icon-dingdan"></i>所有订单</router-link>
                   </li>
                    <li>
-                      <router-link to=""> <i class="iconfont icon-shoucang"></i>收藏夹</router-link>
+                      <router-link  :to="this.$store.state.login.login_name != '' ? '/showlike' :'/login' " > <i class="iconfont icon-shoucang"></i>收藏夹</router-link>
                   </li>
               </ul>
           </div>
-          <div class="owner_fifth" v-show="watch_history !=[]" >
+          <div class="owner_fifth" v-show="showdata" >
               <h5>浏览记录</h5>
                 <ul>
                   <li v-for="obj of watch_history" :key="obj.id">
@@ -89,7 +89,8 @@ export default {
         return {
         title: "owner",
         scroll_active:'',
-        watch_history:[]
+        watch_history:[],
+        showdata:false
 
         };
     },
@@ -98,9 +99,9 @@ export default {
         window.addEventListener('scroll', this.handleScroll,true);
         http.post('watch_history').then((res)=>{
             if(res.status){
+                this.showdata=true;
                 this.watch_history = res.data
             }
-            console.log(res)
         })
     },
     methods:{

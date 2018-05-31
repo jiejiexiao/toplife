@@ -18,6 +18,7 @@ import OwnerComponent from '../components/appMain/owner/owner.vue'
 import AccountComponent from '../components/appMain/owner/account/account.vue'
 import AddressComponent from '../components/appMain/owner/address/address.vue'
 import Add_addressComponet from '../components/appMain/owner/add_address/add_address.vue'
+import ShowlinkComponet  from '../components/appMain/owner/showLikes/showLikes.vue'
 
 //列表页
 import GoodlistComponent from '../components/goodlist/goodlist.vue'
@@ -50,6 +51,9 @@ const router = new VueRouter({
         {path:'/account',component:AccountComponent,name:'account'},
         {path:'/address',component:AddressComponent,name:'address'},
         {path:'/add_address',component:Add_addressComponet,name:'add_address'},
+        {path:'/showlike',component:ShowlinkComponet,name:'showlike'},
+
+        //分类页面
         {path:'/brand_goodscont/:brand',component:BrandGoodsContComponent,name:'brand_goodscont'},
         {path:'/brand_imgtype/:brand',component:BrandImgTypeComponent, name:'brand_imgtype'}
 
