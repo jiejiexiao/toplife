@@ -60,7 +60,6 @@
         data(){
             return {
                 title : 'TOPLIFE',
-     
             }
         },
         methods: {

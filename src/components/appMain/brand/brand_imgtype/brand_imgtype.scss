@@ -1,0 +1,28 @@
+#brand_imgtype{
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    .brand_imgtype_top{
+        width: 100%;
+        height:1.333333rem;
+        position:relative;
+        img{
+            display: block;
+            width: 100%;
+            margin-top: -1.0rem;
+        }
+        .toback{
+            position:absolute;
+            left:0.36rem;
+            top:0.4rem;
+            font-size:0.693333rem;
+        }
+    }
+    .brand_imgtype_main{
+        flex:1;
+        overflow-x:hidden;
+        img{
+            width: 100%;
+        }
+    }
+}

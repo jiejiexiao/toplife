@@ -11,25 +11,25 @@
             <div class="tologin">去登录<i class="iconfont icon-jiantou1"></i></div>
         </div>
         <div class="shopcar_main">
-            <div class="car_list">
+            <div class="car_list" ref="lists">
                 <div class="list_item" v-for="(obj, index) in shopcar_data" :key="index">
                     <div class="list_cont">
                         <label class="list_label">
-                            <input class="list_input" type="checkbox" name="checkbox1" :id="index" :value="obj.product_id" v-model="selected">
+                            <input class="list_input" type="checkbox" name="checkbox1" :id="index" :value="obj" v-model="selected">
                             <span class="checkbox listInput"></span>
                         </label>
-                        <img :src="obj.img" alt=""/>
+                        <img :src="obj.pic" alt=""/>
                         <div class="cont">
-                            <h3>男士低帮运动鞋 白色 意大利尺码</h3>
-                            <div class="params">
+                            <h3>{{obj.name}}</h3>
+                            <!-- <div class="params">
                                 <span>颜色：白色</span>
                                 <span>尺码：40</span>
-                            </div>
-                            <div class="price">￥<span>4,500.00</span></div>
+                            </div> -->
+                            <div class="price">￥<span>{{obj.price}}</span></div>
                             <div class="qty" v-if="NoEdit">&times;<span>{{obj.qty}}</span></div>
                             <span class="qty edit-qty" v-else>
                                 <span class="reduce" @click="reduce"></span>
-                                <input type="number" name="" id="" :value="obj.qty"/>
+                                <input type="number" name="" id="num" :value="obj.qty"/>
                                 <span class="add" @click="add"></span>
                             </span>
                         </div>   
@@ -44,28 +44,55 @@
                 <span class="all_check">全选</span>   
             </label>
             <div class="total" v-if="NoEdit">
-                <div class="pay">共计：￥<span>23,700.00</span></div>
+                <div class="pay">共计：￥<span>{{totalprice}}</span></div>
                 <div class="tip">不含运费</div>
             </div>
-            <div class="toOrder" v-if="NoEdit" :class="{check: this.selected.length > 0, nocheck: this.selected.length== 0}">
-                去结算<span class="num">({{this.selected.length}})</span>
-            </div>
-            <div class="toOrder del" v-else :class="{check: this.selected.length > 0, nocheck: this.selected.length== 0}"> 
+            <button class="toOrder" v-if="NoEdit" :disabled="this.selected.length == 0" :class="{check: this.selected.length > 0, nocheck: this.selected.length== 0}" @click="createOrder">
+                去结算<span class="num">({{totalqty}})</span>
+            </button>
+            <button class="toOrder del" v-else :disabled="this.selected.length == 0" :class="{check: this.selected.length > 0, nocheck: this.selected.length== 0}" @click="del_pro"> 
                 删除
+            </button>
+        </div>
+        <div class="del_tip" v-if="del">
+            <div class="tip">确认要删除吗？</div>
+            <div class="select">
+                <span class="cancel">取消</span>
+                <span class="confirm">确认</span>
             </div>
         </div>
     </div>
 </template>
 <script>
     import './shopcar.scss'
+    import http from '../../../utils/httpclient'
     export default {
         data(){
             return{
-                shopcar_data:[{product_id:1,img:'//img12.360buyimg.com/n8/s200x200_jfs/t16723/321/617239134/134843/845723d6/5a9d0f53Ne112a8f5.jpg!q75.webp',qty:2},{product_id:2,img:'//img12.360buyimg.com/n8/s200x200_jfs/t16723/321/617239134/134843/845723d6/5a9d0f53Ne112a8f5.jpg!q75.webp',qty:3}],
+                shopcar_data:[],
                 selected:[],
+                del:true,
+                isdel:'',
+                totalqty:0,
+                totalprice:0,
                 NoEdit:true,
                 edit_txt:'编辑'
             }
+        },
+        mounted(){
+            http.post('showShopcart').then((res)=>{
+                this.shopcar_data=res.data;
+            })
+        },
+        updated(){
+            let qty=0;
+            let price=0;
+            for(let i=0;i<this.selected.length;i++){
+                qty+=parseInt(this.selected[i]['qty']);
+                price+=parseInt(this.selected[i]['price'])*parseInt(this.selected[i]['qty']);
+            }
+            this.totalqty=qty;
+            this.totalprice=price;
         },
         methods:{
             toback(){
@@ -86,7 +113,15 @@
                     this.edit_txt='完成';
                 }else if(this.edit_txt=='完成'){
                     this.edit_txt='编辑';
-                    
+                    for(let i=0;i<this.shopcar_data.length;i++){
+                        if(this.shopcar_data[i]['qty']==parseInt(this.$refs.lists.children[i].querySelector('#num').value)){
+                            continue;
+                        }else{
+                            this.shopcar_data[i]['qty']=this.$refs.lists.children[i].querySelector('#num').value; 
+                            http.post('update_qty',{product_id:this.shopcar_data[i]['_id'],qty:parseInt(this.$refs.lists.children[i].querySelector('#num').value)}).then((res)=>{
+                            })  
+                        } 
+                    }
                 }
             },
             reduce(e){
@@ -97,6 +132,16 @@
             },
             add(e){
                 e.target.previousElementSibling.value=parseInt(e.target.previousElementSibling.value)+1;
+            },
+            createOrder(){
+                
+            },
+            del_pro(){
+                for(let i=0;i<this.selected.length;i++){
+                    http.post('del_shop_cart',{product_id:this.selected[i]['_id']}).then((res)=>{
+                        console.log(res);
+                    })
+                }    
             }
         }
     }
