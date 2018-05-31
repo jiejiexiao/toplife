@@ -32,7 +32,9 @@
                 </div>
             </div>
             <div class="new">
-                <img src="https://img10.360buyimg.com/tuangou/s750x170_jfs/t13897/302/2030989959/8030/71099545/5a3098f1N7385e4f5.png!q70.webp" alt="" ref="new_img"/>
+                <div class="img">
+                    <img src="https://img10.360buyimg.com/tuangou/s750x170_jfs/t13897/302/2030989959/8030/71099545/5a3098f1N7385e4f5.png!q70.webp" alt="" ref="new_img"/> 
+                </div>
                 <div class="swiper-container2" ref="new_cont">
                     <div class="swiper-pagination2" ref="new_tab"></div> 
                     <div class="swiper-wrapper">
@@ -68,7 +70,9 @@
                 <img src="https://img14.360buyimg.com/tuangou/s750x0_jfs/t16762/156/1689676520/150302/1985c154/5ad4aa5cN1a38387f.jpg!q70.webp" alt="" />
             </div>
             <div class="t_course">
-                <img src="https://img13.360buyimg.com/tuangou/s750x170_jfs/t14923/188/520700596/7032/29f8cb08/5a2fa46fN57321d07.png!q70.webp" alt="" />
+                <div class="img">
+                    <img src="https://img13.360buyimg.com/tuangou/s750x170_jfs/t14923/188/520700596/7032/29f8cb08/5a2fa46fN57321d07.png!q70.webp" alt="" />
+                </div>
                 <div class="t_c1">
                     <img src="https://img13.360buyimg.com/tuangou/s750x0_jfs/t16744/82/2011139793/144769/59d6a93/5ae073f1N6c202416.jpg!q70.webp" alt="" />
                     <div class="t_txt">
@@ -103,7 +107,9 @@
                 </div>
             </div>
             <div class="t_like">
-                <img src="https://img10.360buyimg.com/tuangou/s750x170_jfs/t13699/273/869085212/8533/ea3d328c/5a385816N91d13fff.png!q70.webp" alt="" />
+                <div class="img">
+                    <img src="https://img10.360buyimg.com/tuangou/s750x170_jfs/t13699/273/869085212/8533/ea3d328c/5a385816N91d13fff.png!q70.webp" alt="" />
+                </div>
                 <div class="t_like1">
                     <img src="https://img12.360buyimg.com/tuangou/s750x600_jfs/t16843/5/2318735002/189984/44576541/5af1a32fN67e84e19.jpg!q70.webp" alt="" />
                 </div>
@@ -127,18 +133,20 @@
                 </div>
             </div>
             <div class="t_recommand">
-                <img src="https://img12.360buyimg.com/tuangou/s750x170_jfs/t15703/129/377366599/10052/b726a000/5a2f94afNeae3923a.png!q70.webp" alt="" />
+                <div class="img"> 
+                    <img src="https://img12.360buyimg.com/tuangou/s750x170_jfs/t15703/129/377366599/10052/b726a000/5a2f94afNeae3923a.png!q70.webp" alt="" />
+                </div>
                 <div class="re_goods">
                     <ul>
-                        <li v-for="(value,index) of 6">
-                            <img src="https://img13.360buyimg.com/n1/s265x265_jfs/t21223/83/98782365/308627/a7b884/5afbc854N3d76d634.jpg!q70.webp" alt="" />
+                        <li v-for="(value,index) of recommand" :key="index">
+                            <img :src="value['pic']" alt="" />
                             <div class="brand">
-                                FENDI
+                                {{value.brandName}}
                             </div>
                             <div class="title">
-                                女士FF RELOADED 小号KAN I手袋 棕色 棕色
+                                {{value.name}}
                             </div>
-                            <p class="price">￥<span>24,580</span></p>
+                            <p class="price">￥<span>{{value.price}}</span></p>
                         </li>
                     </ul>
                 </div>
@@ -156,7 +164,8 @@
                 title: 'home',
                 isShow:false,
                 new_tab:[],
-                tab_cont:{}
+                tab_cont:{},
+                recommand:[]
             }            
         },
         mounted(){
@@ -177,6 +186,9 @@
                       el: '.swiper-pagination'
                     }
                 }) 
+            })
+            http.post('query_product',{qty:40}).then((res)=>{
+                this.recommand=res.data;
             })
             this.$refs.main_cont.addEventListener('scroll',(e)=>{
                 e.preventDefault();
