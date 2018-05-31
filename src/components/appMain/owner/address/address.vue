@@ -11,7 +11,7 @@
            <div class="del_comfig" v-show="this.$store.state.address.del_comfigs" >
               <div class="del_box">
                 <h2> 确定要删除吗？</h2>
-                <h3><span @click="$store.dispatch('del_addre',del_num)">确定</span><span @click="del_comfigs=false">取消</span></h3>
+                <h3><span @click="$store.dispatch('del_addre',del_num)">确定</span><span @click="$store.state.address.del_comfigs=false">取消</span></h3>
               </div>
            </div>
 

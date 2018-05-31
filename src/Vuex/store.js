@@ -11,6 +11,7 @@ let state = {
     classroomshowData:[],
     chosenTab:[],
     keepUserStauts:{},
+    detailListObj:{},
 }
 
 let mutations = {
@@ -37,6 +38,9 @@ let mutations = {
         state.chosenTab = arr;
     },
     keepStatus(){
+    },
+    setDetailObj(_state,obj){
+        _state.detailListObj = obj;
     }
 }
 Vue.use(Vuex)

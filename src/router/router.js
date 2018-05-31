@@ -20,6 +20,9 @@ import Add_addressComponet from '../components/appMain/owner/add_address/add_add
 //列表页
 import GoodlistComponent from '../components/goodlist/goodlist.vue'
 
+//详情页
+import DetailListComponent from '../components/detailList/detailList.vue'
+
 //注册登录
 import LoginComponent from '../components/login/login.vue'
 import RegisterComponent from '../components/register/register.vue'
@@ -42,6 +45,7 @@ const router = new VueRouter({
         {path:'/shopcar', component: ShopcarComponent, name: 'shopcar'},
         {path:'/appmain/classroom/classroomshow/:order', component:ClassroomShowComponent, name:'classroomshow'},
         {path:'/goodlist/:key', component:GoodlistComponent, name:'goodlist'},
+        {path:'/detailList', component:DetailListComponent, name:'detailList'},
         //个人账号管理
         {path:'/account',component:AccountComponent,name:'account'},
         {path:'/address',component:AddressComponent,name:'address'},
