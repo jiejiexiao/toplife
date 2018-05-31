@@ -50,6 +50,11 @@ const router = new VueRouter({
         {path:'/account',component:AccountComponent,name:'account'},
         {path:'/address',component:AddressComponent,name:'address'},
         {path:'/add_address',component:Add_addressComponet,name:'add_address'},
+
+
+
+
+        
     ]
 })
 

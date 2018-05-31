@@ -29,6 +29,7 @@
             img{
                 margin-top: 0.2rem;
                 width:0.9333rem;
+                border-radius: 50%;
             }
         }
         span:nth-child(1){
@@ -60,6 +61,7 @@
                  }
                  img{
                      width: 2.4rem;
+                     border-radius: 50%;
                  }
             }
         }
@@ -179,11 +181,15 @@
                    
                         img{
                             width: 4.0667rem;
+                            height: 4.0667rem;
                             margin-bottom: 1.0667rem;
                         }
                         h3{
                             font-size:0.32rem;
                             line-height: 0.64rem;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow:ellipsis;
                         }
                         p{
                             font-size: 0.2933rem;

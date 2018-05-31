@@ -123,21 +123,21 @@
        .del_box{
           
            position: absolute;
-           border-radius: 15px;
-           width: 300px;
-           height: 200px;
+           border-radius: 0.2rem;
+           width: 4rem;
+           height: 2.6667rem;
            background-color: #333333;
            left: 50%;
            top: 50%;
            text-align: center;
            transform: translate(-50%,-50%);
            h2{
-               line-height: 95px;
+               line-height: 1.2667rem;
                color: #C4A66A;
-               margin-bottom: 10px;
+               margin-bottom: 0.1333rem;
            }
            h3{
-               line-height: 80px;
+               line-height: 1.0667rem;
                display: flex;
                justify-content: space-around;
                
@@ -145,7 +145,7 @@
                    display: inline-block;
                    width: 30%;
                  
-                   border-radius: 8px;
+                   border-radius: 0.1067rem;
                    background-color:#C4A66A;
                }
            }
