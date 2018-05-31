@@ -187,14 +187,15 @@
                         h3{
                             font-size:0.32rem;
                             line-height: 0.64rem;
-                            overflow: hidden;
-                            white-space: nowrap;
-                            text-overflow:ellipsis;
+                           
                         }
                         p{
                             font-size: 0.2933rem;
                             color: #282825;
                             line-height: 0.3333rem;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow:ellipsis;
                         }
                         h6{
                             margin-top:0.2667rem;
