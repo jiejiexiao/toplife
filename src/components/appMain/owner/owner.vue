@@ -55,7 +55,7 @@
                   </li>
               </ul>
           </div>
-          <div class="owner_fifth" v-show="watch_history !=[]" >
+          <div class="owner_fifth" v-show="showdata" >
               <h5>浏览记录</h5>
                 <ul>
                   <li v-for="obj of watch_history" :key="obj.id">
@@ -89,7 +89,8 @@ export default {
         return {
         title: "owner",
         scroll_active:'',
-        watch_history:[]
+        watch_history:[],
+        showdata:false
 
         };
     },
@@ -98,6 +99,7 @@ export default {
         window.addEventListener('scroll', this.handleScroll,true);
         http.post('watch_history').then((res)=>{
             if(res.status){
+                this.showdata=true;
                 this.watch_history = res.data
             }
             console.log(res)
