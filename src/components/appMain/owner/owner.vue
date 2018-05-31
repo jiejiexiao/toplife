@@ -3,7 +3,7 @@
       <div class="owner_top">
         <span></span>
         <span v-if="!scroll_active">个人中心</span>
-        <span  v-if="scroll_active"><img src="https://static.360buyimg.com/tp-statics/2018-5-25/m/img/no_photo@2x.png" alt=""></span>
+        <span  v-if="scroll_active"><img :src="this.$store.state.login.login_name != '' ? 'https://storage.360buyimg.com/i.imageUpload/6a645f3461616237653364633863613831343436333536373935343430_big.jpg': 'https://static.360buyimg.com/tp-statics/2018-5-25/m/img/no_photo@2x.png' "/></span>
         <router-link  to=""><i class="iconfont icon-iconset0317"></i></router-link>
       </div>
       <div class="owner_main" @scroll="handleScroll">
@@ -12,19 +12,21 @@
                     <i class="icon-qianbao iconfont"></i>
                     我的钱包
                 </router-link>
-                <router-link to="/login">
-                    <img src="https://static.360buyimg.com/tp-statics/2018-5-25/m/img/no_photo@2x.png" alt="">
+                <router-link :to="this.$store.state.login.login_name != '' ? '/account' :'/login' ">
+                    <img :src="this.$store.state.login.login_name != '' ? 'https://storage.360buyimg.com/i.imageUpload/6a645f3461616237653364633863613831343436333536373935343430_big.jpg': 'https://static.360buyimg.com/tp-statics/2018-5-25/m/img/no_photo@2x.png' " />
                 </router-link>
-                <router-link to="/account">
+                <router-link :to="this.$store.state.login.login_name != '' ? '/account' :'/login'" >
                     <i class="icon-xiaoxi iconfont"></i>
                     个人信息
                 </router-link>
           </div>
           <div class="owner_second">
-              <router-link to="/login">
-                  立即登录
+              <router-link :to="this.$store.state.login.login_name != '' ? '/account' :'/login' ">
+             
+                  {{this.$store.state.login.login_name != '' ?this.$store.state.login.login_name: '立即登录' }}
               </router-link>
-                <p>登录后可查看您的会员等级及权益</p>
+                <p> {{this.$store.state.login.login_name != '' ?'您是银卡会员': '登录后可查看您的会员等级及权益 ' }}</p>
+                  <p> {{this.$store.state.login.login_name != '' ?'在消费20000元或单笔满10000元可升级为金卡会员': '' }}</p>
           </div>
           <div class="owner_third">
               <router-link to=""><img src="https://static.360buyimg.com/tp-statics/2018-5-25/m/img/ic_express_silver@2x.png" alt="">京尊达</router-link>
@@ -53,49 +55,18 @@
                   </li>
               </ul>
           </div>
-          <div class="owner_fifth" >
-              <h5>量身推荐</h5>
+          <div class="owner_fifth" v-show="watch_history !=[]" >
+              <h5>浏览记录</h5>
                 <ul>
-                  <li>
+                  <li v-for="obj of watch_history" :key="obj.id">
                       <router-link to="">
-                          <img src="https://img10.360buyimg.com/n1/s530x530_jfs/t21535/225/174004957/341478/2487590c/5b01745bNe5a891d0.jpg!q70.webp" alt="">
-                          <h3>MARY KATRANTZOU</h3>
-                          <p>条纹针织衫连衣裙 彩色 国际通用码</p>
-                          <h6>￥3165</h6>
+                          <img :src="obj.pic">
+                          <h3>{{obj.brandName}}</h3>
+                          <p>{{obj.name}}</p>
+                          <h6>￥{{obj.price}}</h6>
                       </router-link>
                   </li>
-                  <li>
-                      <router-link to="">
-                          <img src="https://img10.360buyimg.com/n1/s530x530_jfs/t21535/225/174004957/341478/2487590c/5b01745bNe5a891d0.jpg!q70.webp" alt="">
-                          <h3>MARY KATRANTZOU</h3>
-                          <p>条纹针织衫连衣裙 彩色 国际通用码</p>
-                          <h6>￥3165</h6>
-                      </router-link>
-                  </li>
-                  <li>
-                      <router-link to="">
-                          <img src="https://img10.360buyimg.com/n1/s530x530_jfs/t21535/225/174004957/341478/2487590c/5b01745bNe5a891d0.jpg!q70.webp" alt="">
-                          <h3>MARY KATRANTZOU</h3>
-                          <p>条纹针织衫连衣裙 彩色 国际通用码</p>
-                          <h6>￥3165</h6>
-                      </router-link>
-                  </li>
-                    <li>
-                      <router-link to="">
-                          <img src="https://img10.360buyimg.com/n1/s530x530_jfs/t21535/225/174004957/341478/2487590c/5b01745bNe5a891d0.jpg!q70.webp" alt="">
-                          <h3>MARY KATRANTZOU</h3>
-                          <p>条纹针织衫连衣裙 彩色 国际通用码</p>
-                          <h6>￥3165</h6>
-                      </router-link>
-                  </li>
-                  <li>
-                      <router-link to="">
-                          <img src="https://img10.360buyimg.com/n1/s530x530_jfs/t21535/225/174004957/341478/2487590c/5b01745bNe5a891d0.jpg!q70.webp" alt="">
-                          <h3>MARY KATRANTZOU</h3>
-                          <p>条纹针织衫连衣裙 彩色 国际通用码</p>
-                          <h6>￥3165</h6>
-                      </router-link>
-                  </li>
+                
               </ul>
            </div>  
       </div>
@@ -109,17 +80,28 @@
 
 <script type="text/javascript">
 import "./owner.scss";
+//引入vuex模块
+import { mapGetters, mapActions } from "vuex";
+import http from '../../../utils/httpclient'
   
 export default {
     data() {
         return {
         title: "owner",
-        scroll_active:''
+        scroll_active:'',
+        watch_history:[]
+
         };
     },
     mounted(){
         this.$store.commit('tabChange')
         window.addEventListener('scroll', this.handleScroll,true);
+        http.post('watch_history').then((res)=>{
+            if(res.status){
+                this.watch_history = res.data
+            }
+            console.log(res)
+        })
     },
     methods:{
         handleScroll (e) {

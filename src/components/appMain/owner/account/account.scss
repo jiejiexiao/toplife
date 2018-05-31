@@ -11,64 +11,64 @@
     .account_top{
         display: flex;
         justify-content: space-between;
-        height: 110px;
+        height: 1.4667rem;
         background-color: white;
-        padding: 0 15px;
-        font-size: 38px;
-        line-height: 110px;
+        padding: 0 0.2rem;
+        font-size: 0.5067rem;
+        line-height: 1.4667rem;
         width: 100%;
-        border-bottom: 1px solid #D6D6D6;
+        border-bottom: 0.0133rem solid #D6D6D6;
         a{
             display: inline-block;
             text-decoration: none;
             color: #646464;
-            width: 50px;
+            width: 0.6667rem;
             i{
-                font-size: 40px;
+                font-size: 0.5333rem;
             }
         }
     }
     .account_second{
-        height: 180px;
+        height: 2.4rem;
         background-color: white;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding:20px 40px 30px 40px;
+        padding:0.2667rem 0.5333rem 0.4rem 0.5333rem;
         img{
-            width: 117px;
+            width: 1.56rem;
             border-radius: 50%;
         }
         i{
             display: inline-block;
-            margin-top: 50px;
-            font-size: 35px;
+            margin-top: 0.6667rem;
+            font-size: 0.4667rem;
             color: #646464;
         }
     }
     .account_mian{
-        height: 810px;
+        height: 10.8rem;
         width: 100%;
-        margin-top: 20px;
+        margin-top: 0.2667rem;
         background-color: white;
         ul{
             width: 100%;
-            padding: 0 40px;
+            padding: 0 0.5333rem;
             li{
                 display: flex;
                 justify-content: space-between;
-                height: 115px;
-                line-height: 115px;
-                font-size: 25px;
+                height: 1.5333rem;
+                line-height: 1.5333rem;
+                font-size: 0.3333rem;
                
-                border-bottom: 1px solid #D7D7D7;
+                border-bottom: 0.0133rem solid #D7D7D7;
                 a{
                     color: #646464; 
                     display: inline-block;
-                    width: 60px;
+                    width: 0.8rem;
                     text-align: right;
                     i{
-                        font-size: 35px;
+                        font-size: 0.4667rem;
                     }
                 }
             }
@@ -78,13 +78,57 @@
         
         position: absolute;
         width: 100%;
-        line-height: 105px;
+        line-height: 1.4rem;
         color: white;
         bottom: 0;
-        height: 105px;
+        height: 1.4rem;
         background-color: #232321;
-        font-size: 30px;
+        font-size: 0.4rem;
         text-decoration: none;
         text-align: center;
     }
+
+    //删除
+    .del_comfig{
+        position: absolute;
+     
+        top: 0;
+        left: 0;
+        z-index: 666;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.3);
+        .del_box{
+           
+            position: absolute;
+            border-radius: 0.2rem;
+            width: 4rem;
+            height: 2.6667rem;
+            background-color: #333333;
+            left: 50%;
+            top: 50%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+            h2{
+                line-height: 1.2667rem;
+                color: #C4A66A;
+                margin-bottom: 0.1333rem;
+            }
+            h3{
+                line-height: 1.0667rem;
+                display: flex;
+                justify-content: space-around;
+                
+                span{
+                    display: inline-block;
+                    width: 30%;
+                  
+                    border-radius: 0.1067rem;
+                    background-color:#C4A66A;
+                }
+            }
+        }
+    }
+
+
 }
