@@ -34,47 +34,47 @@
         
         ul{
             display: flex;
-            padding: 0 40px;
+            padding: 0 0.5333rem;
             flex-direction: column;
             li{
-                height: 290px;
+                height: 3.8667rem;
                 display: flex;
                 justify-content: space-between;
-                padding: 40px 0;
+                padding: 0.5333rem 0;
                
-                border-bottom: 1px solid #D5D4D4;
+                border-bottom: 0.0133rem solid #D5D4D4;
                 img{
-                    width: 205px;
-                    height: 205px;
-                    border: 2px solid #D5D4D4;
+                    width: 2.7333rem;
+                    height: 2.7333rem;
+                    border: 0.0267rem solid #D5D4D4;
                    
                 }
                 .show_box{
-                    width: 428px;
-                    height: 205px;
+                    width: 5.7067rem;
+                    height: 2.7333rem;
                    
                     display: flex;
                     justify-content: space-between;
                     flex-direction: column;
                     h5{
-                        line-height: 30px;
+                        line-height: 0.4rem;
                         margin: 0;
-                        font-size: 23px;
+                        font-size: 0.3067rem;
                     }
                     h3{
-                        line-height: 50px;
+                        line-height: 0.6667rem;
                         display: flex;
                         justify-content: space-between;
                         a{
                             display:inline-block;
-                            width: 180px;
-                            height: 46px;
+                            width: 2.4rem;
+                            height: 0.6133rem;
                             text-align: center;
-                            line-height: 46px;
-                            font-size: 22px;
+                            line-height: 0.6133rem;
+                            font-size: 0.2933rem;
                             font-family: "宋体";
                             color: #0E0E0B;
-                            border: 2px solid #545454;
+                            border: 0.0267rem solid #545454;
                         }
                         span{
                             font-family: serif;
