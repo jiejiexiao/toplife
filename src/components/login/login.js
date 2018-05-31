@@ -8,7 +8,9 @@ const state = {
     //登录状态
     login_state: {},
     lodingbox: false,
-    user_state:false
+    user_state:false,
+    //登录的用户名
+    login_name:''
 }
 
 //里面放的是方法
@@ -39,7 +41,13 @@ const actions = {
                         store.state.lodingbox= false;
                          router.push({ name: 'home' })
                     }, 100)
-                    resolve(store.state.user_state)
+                    resolve(store.state.user_state);
+                    //发起请求返回用户信息
+                    http.post('islogin').then((res)=>{
+                        store.state.login_name = res.data;
+                    })
+
+
                 } else {
                     setTimeout(() => { store.state.lodingbox = false; }, 100);
                     //怎样做

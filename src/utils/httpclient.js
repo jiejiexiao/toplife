@@ -17,7 +17,7 @@ export default {
                 params: _params,
                 method: 'get',
                 headers: {
-                    'auth': window.localStorage.getItem('token_name')
+                    'auth': window.localStorage.getItem('access_token')
                 },
             }).then((res) => {
                 if (!res.data.status && res.data.message == 'unauth') {

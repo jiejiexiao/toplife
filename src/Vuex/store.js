@@ -11,7 +11,8 @@ let state = {
     classroomshowData:[],
     chosenTab:[],
     keepUserStauts:{},
-    brandsData:{}
+    brandsData:{},
+    detailListObj:{},
 }
 
 let mutations = {
@@ -29,6 +30,17 @@ let mutations = {
             state.brandsData = res;         
         })
     },
+    //获得用的登录信息
+    //设置登录信息
+    set_Login(){
+        //console.log(55)
+      //发起请求返回用户信息
+      http.post('islogin').then((res)=>{
+            if(res.status){
+                this.state.login.login_name = res.data;
+            }
+    })
+    },
     tabChange(){
         let name = window.location.hash.split('/');
         var arr = [];
@@ -41,6 +53,9 @@ let mutations = {
         state.chosenTab = arr;
     },
     keepStatus(){
+    },
+    setDetailObj(_state,obj){
+        _state.detailListObj = obj;
     }
 }
 Vue.use(Vuex)
