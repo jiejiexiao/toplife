@@ -11,6 +11,7 @@ let state = {
     classroomshowData:[],
     chosenTab:[],
     keepUserStauts:{},
+    brandsData:{},
     detailListObj:{},
 }
 
@@ -24,6 +25,9 @@ let mutations = {
         })
         http.get('http://localhost:8080/src/assets/config/classroomshow.txt').then((res) => {
             state.classroomshowData = res;
+        }),
+        http.get('http://localhost:8080/src/assets/config/brand_cont.txt').then((res)=>{
+            state.brandsData = res;         
         })
     },
     //获得用的登录信息
@@ -55,7 +59,6 @@ let mutations = {
     }
 }
 Vue.use(Vuex)
-
 export default new Vuex.Store({
     state,
     mutations,
