@@ -3,8 +3,8 @@
         <div class="shopcar_top" ref="top">
             <span class="iconfont icon-jiantou21 toback" @click="toback()"></span>
             <span class="title">购物车</span>
-            <span class="profit">优惠券</span> 
-            <span class="edit" @click="edit">{{edit_txt}}</span>
+            <span class="profit" v-show="shopcar_data.length!=0">优惠券</span> 
+            <span class="edit" @click="edit" v-show="shopcar_data.length!=0">{{edit_txt}}</span>
         </div>
         <div class="logintip">
             <div class="txt">登录后可同步账号购物车中的商品</div>
@@ -21,10 +21,6 @@
                         <img :src="obj.pic" alt=""/>
                         <div class="cont">
                             <h3>{{obj.name}}</h3>
-                            <!-- <div class="params">
-                                <span>颜色：白色</span>
-                                <span>尺码：40</span>
-                            </div> -->
                             <div class="price">￥<span>{{obj.price}}</span></div>
                             <div class="qty" v-if="NoEdit">&times;<span>{{obj.qty}}</span></div>
                             <span class="qty edit-qty" v-else>
@@ -35,6 +31,14 @@
                         </div>   
                     </div>
                 </div>
+            </div>
+            <div class="empty" v-if="shopcar_data.length==0">
+                <div class="null">
+                </div>
+                <div class="txt_tip">哎呀，购物车还没有东西～</div>
+            </div>
+            <div class="img_box">
+                <img src="//static.360buyimg.com/tp-statics/2018-5-30/m/img/banner@2x.png" alt="" />
             </div>
         </div>
         <div class="shopcar_footer">
@@ -54,11 +58,13 @@
                 删除
             </button>
         </div>
-        <div class="del_tip" v-if="del">
-            <div class="tip">确认要删除吗？</div>
-            <div class="select">
-                <span class="cancel">取消</span>
-                <span class="confirm">确认</span>
+        <div class="overlay" v-if="del">
+            <div class="del_tip" v-if="del">
+                <div class="tip">确认要删除吗？</div>
+                <div class="select">
+                    <span class="cancel" @click="change(false)">取消</span>
+                    <span class="confirm" @click="change(true)">确认</span>
+                </div>
             </div>
         </div>
     </div>
@@ -71,8 +77,7 @@
             return{
                 shopcar_data:[],
                 selected:[],
-                del:true,
-                isdel:'',
+                del:false,
                 totalqty:0,
                 totalprice:0,
                 NoEdit:true,
@@ -137,11 +142,21 @@
                 
             },
             del_pro(){
-                for(let i=0;i<this.selected.length;i++){
-                    http.post('del_shop_cart',{product_id:this.selected[i]['_id']}).then((res)=>{
-                        console.log(res);
-                    })
-                }    
+                this.del=true;
+            },
+            change(bool){
+                if(bool){
+                    for(let i=0;i<this.selected.length;i++){
+                        http.post('del_shop_cart',{product_id:this.selected[i]['_id']}).then((res)=>{
+                            if(res.status){
+
+                            }
+                        })
+                    } 
+                    this.del=false;     
+                }else if(!bool){
+                    this.del=false;
+                }
             }
         }
     }
