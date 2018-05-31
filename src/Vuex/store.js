@@ -17,16 +17,16 @@ let state = {
 
 let mutations = {
     getDataSet(){
-        http.get('http://localhost:8080/src/assets/config/classroom.txt').then((res) => {
+        http.get('http://10.3.133.27:8080/src/assets/config/classroom.txt').then((res) => {
             state.classroomData = res;
         })
-        http.get('http://localhost:8080/src/assets/config/classify.txt').then((res) => {
+        http.get('http://10.3.133.27:8080/src/assets/config/classify.txt').then((res) => {
             state.classifyData = res;
         })
-        http.get('http://localhost:8080/src/assets/config/classroomshow.txt').then((res) => {
+        http.get('http://10.3.133.27:8080/src/assets/config/classroomshow.txt').then((res) => {
             state.classroomshowData = res;
         }),
-        http.get('http://localhost:8080/src/assets/config/brand_cont.txt').then((res)=>{
+        http.get('http://10.3.133.27:8080/src/assets/config/brand_cont.txt').then((res)=>{
             state.brandsData = res;         
         })
     },
