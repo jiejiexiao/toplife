@@ -1,7 +1,7 @@
 <template>
     <div id="owner"  >
       <div class="owner_top">
-        <span></span>
+        <span class="iconfont icon-jiantou21 toback" @click="toback()"></span>
         <span v-if="!scroll_active">个人中心</span>
         <span  v-if="scroll_active"><img :src="this.$store.state.login.login_name != '' ? 'https://storage.360buyimg.com/i.imageUpload/6a645f3461616237653364633863613831343436333536373935343430_big.jpg': 'https://static.360buyimg.com/tp-statics/2018-5-25/m/img/no_photo@2x.png' "/></span>
         <router-link  to=""><i class="iconfont icon-iconset0317"></i></router-link>
@@ -97,13 +97,16 @@ export default {
         this.$store.commit('tabChange')
         window.addEventListener('scroll', this.handleScroll,true);
         http.post('watch_history').then((res)=>{
+            console.log(res);
             if(res.status){
-                this.watch_history = res.data
+                this.watch_history = res.data;
             }
-            console.log(res)
         })
     },
     methods:{
+        toback(){
+            window.history.back();
+        },
         handleScroll (e) {
             //获得该盒子的滚动高度
             if(e.target.scrollTop > 150 ){

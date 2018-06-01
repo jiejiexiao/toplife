@@ -29,6 +29,7 @@ import DetailListComponent from '../components/detailList/detailList.vue'
 import LoginComponent from '../components/login/login.vue'
 import RegisterComponent from '../components/register/register.vue'
 import ShopcarComponent from '../components/appMain/shopcar/shopcar.vue'
+import PayOrderComponent from '../components/appMain/owner/payOrder/payorder.vue'
 const router = new VueRouter({
     routes : [
         {path:'/', redirect: '/appmain'},
@@ -51,7 +52,8 @@ const router = new VueRouter({
         {path:'/address',component:AddressComponent,name:'address'},
         {path:'/add_address',component:Add_addressComponet,name:'add_address'},
         {path:'/brand_goodscont/:brand',component:BrandGoodsContComponent,name:'brand_goodscont'},
-        {path:'/brand_imgtype/:brand',component:BrandImgTypeComponent, name:'brand_imgtype'}
+        {path:'/brand_imgtype/:brand',component:BrandImgTypeComponent, name:'brand_imgtype'},
+        {path:'/payorder',component:PayOrderComponent, name:'payorder'}
 
     ]
 })

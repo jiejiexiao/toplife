@@ -4,7 +4,7 @@
                 <div class="btn btn_back"><img src="http://static.360buyimg.com/tp-statics/images/ic_search_leftarrow.png" @click="returnBack"/></div>
                 <div class="title"><input type="text" :placeholder="$route.params.key" /></div>
                 <div class="btn btn_cartAndsearch">
-                    <img src="http://static.360buyimg.com/tp-statics/images/homeTop/shoppingbag.png"/>
+                    <img src="http://static.360buyimg.com/tp-statics/images/homeTop/shoppingbag.png" @click="$router.push('/shopcar')"/>
                 </div>
         </header>
         <main class="goodlist_main" @touchend="lazyLoading">
