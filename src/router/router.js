@@ -32,10 +32,10 @@ import RegisterComponent from '../components/register/register.vue'
 
 //购物车
 import ShopcarComponent from '../components/appMain/shopcar/shopcar.vue'
-//订单页面
+
+import PayOrderComponent from '../components/appMain/owner/payOrder/payorder.vue'
+
 import OrderComponent from '../components/appMain/shopcar/orders/orders.vue'
-
-
 
 const router = new VueRouter({
     routes : [
@@ -65,7 +65,8 @@ const router = new VueRouter({
 
         //分类页面
         {path:'/brand_goodscont/:brand',component:BrandGoodsContComponent,name:'brand_goodscont'},
-        {path:'/brand_imgtype/:brand',component:BrandImgTypeComponent, name:'brand_imgtype'}
+        {path:'/brand_imgtype/:brand',component:BrandImgTypeComponent, name:'brand_imgtype'},
+        {path:'/payorder',component:PayOrderComponent, name:'payorder'}
 
     ]
 })

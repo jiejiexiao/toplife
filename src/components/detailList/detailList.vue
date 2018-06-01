@@ -3,7 +3,7 @@
         <header class="header">
             <div class="btn return_back"><img src="//static.360buyimg.com/tp-statics/images/ic_search_leftarrow.png" @click="returnBack"/></div>
             <div class="title">商品详情</div>
-            <div class="btn cart_btn"><img src="//static.360buyimg.com/tp-statics/images/homeTop/shoppingbag.png" /></div>
+            <div class="btn cart_btn" @click="$router.push('/shopcar')"><img src="//static.360buyimg.com/tp-statics/images/homeTop/shoppingbag.png" /></div>
         </header>
         <main class="main">
             <div class="imgshow">
@@ -20,7 +20,7 @@
         </main>
         <footer class="footer">
             <div class="collection">
-                <i :class="['iconfont','icon-shoucang',activeIcon ? 'active' : '']" @click="collection"></i>
+                <i :class="['iconfont','icon-collection',activeIcon ? 'active' : '']" @click="collection"></i>
             </div>
             <button @click="addCartOption">加入购物车</button>
         </footer>
@@ -79,8 +79,12 @@
                 } else{
                     let prev = Math.floor(p/1000);
                     let back = p%1000;
-                    if(back == 0){
-                        back = '000';
+                    if(back < 10){
+                        back = '00'+back;
+                    } else if(back >= 10 && back < 100){
+                        back = '0'+back;
+                    } else {
+                        back = back;
                     }
                     return prev + ',' + back;
                 }
