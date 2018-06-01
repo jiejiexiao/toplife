@@ -30,6 +30,7 @@
     }
     .account_second{
         height: 2.4rem;
+        position: relative;
         background-color: white;
         display: flex;
         justify-content: space-between;
@@ -44,6 +45,12 @@
             margin-top: 0.6667rem;
             font-size: 0.4667rem;
             color: #646464;
+        }
+        span{
+            position: absolute;
+            top: 0.8rem;
+            font-size: 0.4rem;
+            left: 2.5333rem;
         }
     }
     .account_mian{
