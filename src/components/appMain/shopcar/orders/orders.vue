@@ -48,7 +48,7 @@
                 <h2>
                     <span>共{{orders_new.total_qty}}件商品</span>
                     <span>小计：<i>￥{{
-                        orders_new.total_price.toFixed(2)}}</i></span>
+                        orders_new.total_price}}</i></span>
                 </h2>
 
 
