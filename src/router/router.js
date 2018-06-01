@@ -18,6 +18,7 @@ import OwnerComponent from '../components/appMain/owner/owner.vue'
 import AccountComponent from '../components/appMain/owner/account/account.vue'
 import AddressComponent from '../components/appMain/owner/address/address.vue'
 import Add_addressComponet from '../components/appMain/owner/add_address/add_address.vue'
+import ShowlinkComponet  from '../components/appMain/owner/showLikes/showLikes.vue'
 
 //列表页
 import GoodlistComponent from '../components/goodlist/goodlist.vue'
@@ -28,8 +29,14 @@ import DetailListComponent from '../components/detailList/detailList.vue'
 //注册登录
 import LoginComponent from '../components/login/login.vue'
 import RegisterComponent from '../components/register/register.vue'
+
+//购物车
 import ShopcarComponent from '../components/appMain/shopcar/shopcar.vue'
+
 import PayOrderComponent from '../components/appMain/owner/payOrder/payorder.vue'
+
+import OrderComponent from '../components/appMain/shopcar/orders/orders.vue'
+
 const router = new VueRouter({
     routes : [
         {path:'/', redirect: '/appmain'},
@@ -44,6 +51,9 @@ const router = new VueRouter({
         {path:'/login', component: LoginComponent, name:'login'},
         {path:'/register', component: RegisterComponent, name: 'register'},
         {path:'/shopcar', component: ShopcarComponent, name: 'shopcar'},
+        //订单
+        {path:'/orders', component: OrderComponent, name: 'orders'},
+        
         {path:'/appmain/classroom/classroomshow/:order', component:ClassroomShowComponent, name:'classroomshow'},
         {path:'/goodlist/:key', component:GoodlistComponent, name:'goodlist'},
         {path:'/detailList', component:DetailListComponent, name:'detailList'},
@@ -51,6 +61,9 @@ const router = new VueRouter({
         {path:'/account',component:AccountComponent,name:'account'},
         {path:'/address',component:AddressComponent,name:'address'},
         {path:'/add_address',component:Add_addressComponet,name:'add_address'},
+        {path:'/showlike',component:ShowlinkComponet,name:'showlike'},
+
+        //分类页面
         {path:'/brand_goodscont/:brand',component:BrandGoodsContComponent,name:'brand_goodscont'},
         {path:'/brand_imgtype/:brand',component:BrandImgTypeComponent, name:'brand_imgtype'},
         {path:'/payorder',component:PayOrderComponent, name:'payorder'}
