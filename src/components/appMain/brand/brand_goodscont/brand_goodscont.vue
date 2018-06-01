@@ -44,19 +44,19 @@
             }
         },
         mounted(){
-            this.$refs.main_cont.addEventListener('scroll',(e)=>{
-                e.preventDefault();
-                let scrollTop=this.$refs.main_cont.scrollTop;
-                if(scrollTop >= this.$refs.top.offsetHeight){
-                    this.isShow=false; 
-                    this.$refs.top.classList.remove('brand_goodscont_top');
-                    this.$refs.top.classList.add('top_scroll');
-                }else{
-                    this.isShow=true; 
-                    this.$refs.top.classList.add('brand_goodscont_top');
-                    this.$refs.top.classList.remove('top_scroll');
-                }
-            })
+            // this.$refs.main_cont.addEventListener('scroll',(e)=>{
+            //     e.preventDefault();
+            //     let scrollTop=this.$refs.main_cont.scrollTop;
+            //     if(scrollTop >= this.$refs.top.offsetHeight){
+            //         this.isShow=false; 
+            //         this.$refs.top.classList.remove('brand_goodscont_top');
+            //         this.$refs.top.classList.add('top_scroll');
+            //     }else{
+            //         this.isShow=true; 
+            //         this.$refs.top.classList.add('brand_goodscont_top');
+            //         this.$refs.top.classList.remove('top_scroll');
+            //     }
+            // })
         },
         updated(){
             var mySwiper = new Swiper ('.swiper-container',{
@@ -70,19 +70,19 @@
                   el: '.swiper-pagination'
                 }
             }) 
-            this.$refs.main_cont.addEventListener('scroll',(e)=>{
-                e.preventDefault();
-                let scrollTop=this.$refs.main_cont.scrollTop;
-                if(scrollTop >= this.$refs.top.offsetHeight){
-                    this.isShow=false; 
-                    this.$refs.top.classList.remove('brand_goodscont_top');
-                    this.$refs.top.classList.add('top_scroll');
-                }else{
-                    this.isShow=true; 
-                    this.$refs.top.classList.add('brand_goodscont_top');
-                    this.$refs.top.classList.remove('top_scroll');
-                }
-            })
+            // this.$refs.main_cont.addEventListener('scroll',(e)=>{
+            //     e.preventDefault();
+            //     let scrollTop=this.$refs.main_cont.scrollTop;
+            //     if(scrollTop >= this.$refs.top.offsetHeight){
+            //         this.isShow=false; 
+            //         this.$refs.top.classList.remove('brand_goodscont_top');
+            //         this.$refs.top.classList.add('top_scroll');
+            //     }else{
+            //         this.isShow=true; 
+            //         this.$refs.top.classList.add('brand_goodscont_top');
+            //         this.$refs.top.classList.remove('top_scroll');
+            //     }
+            // })
         },
         methods:{
             toback(){

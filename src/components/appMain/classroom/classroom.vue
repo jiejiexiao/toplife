@@ -4,7 +4,7 @@
             <header class="classroom_header">
                 <div class="btn btn_back"><img src="http://static.360buyimg.com/tp-statics/images/ic_search_leftarrow.png" @click="returnBack"/></div>
                 <div class="title">T 课堂</div>
-                <div class="btn btn_cart"><img src="http://static.360buyimg.com/tp-statics/images/homeTop/shoppingbag.png"/></div>
+                <div class="btn btn_cart" @click="$router.push('/shopcar')"><img src="http://static.360buyimg.com/tp-statics/images/homeTop/shoppingbag.png"/></div>
             </header>
             <main class="classroom_main">
                 <ul>

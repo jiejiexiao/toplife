@@ -2,7 +2,7 @@
     <div id="home">
         <div class="home_top" ref="top">
             <span class="iconfont icon-sousuo sousuo" v-if="isShow"></span>
-            <span class="iconfont icon-gouwudai gouwudai"></span>
+            <span class="iconfont icon-gouwudai gouwudai" @click="$router.push('/shopcar')"></span>
         </div>
         <div class="home_main" ref="main_cont">
             <div class="home_search">
@@ -44,7 +44,7 @@
                                 <i></i>
                             </div>
                             <div class="goods">
-                                <div class="item" v-for="(obj,index) of tab_cont[key]['dataset']" :key="obj.id" :id="obj._id">
+                                <div class="item" v-for="(obj,index) of tab_cont[key]['dataset']" :key="obj.id" :id="obj._id" @click="turnDetail(obj)">
                                     <img :src="obj.pic" alt="" />
                                     <span class="brand">{{obj.brandName}}</span>
                                     <span class="title">{{obj.name}}</span>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="re_goods">
                     <ul>
-                        <li v-for="(value,index) of recommand" :key="index">
+                        <li v-for="(value,index) of recommand" :key="index" @click="turnDetail(value)">
                             <img :src="value['pic']" alt="" />
                             <div class="brand">
                                 {{value.brandName}}
@@ -228,6 +228,12 @@
             for(let i=0;i<this.$refs.new_tab.children.length;i++){
                 this.$refs.new_tab.children[i].innerText=this.new_tab[i];
                 this.$refs.new_tab.children[i].id=i;   
+            }
+        },
+        methods:{
+            turnDetail(obj){
+                this.$store.commit('setDetailObj',obj);
+                this.$router.push('/detailList');
             }
         }
     }

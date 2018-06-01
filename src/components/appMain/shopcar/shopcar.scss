@@ -3,52 +3,52 @@
     display:flex;
     flex-direction:column;
     .shopcar_top{
-        height: 100px;
+        height: 1.333333rem;
         display:flex;
         align-items:center;
         .toback{
-            font-size:54px;
-            height: 48px;
+            font-size:0.72rem;
+            height: 0.64rem;
             width: 30%;
             margin-left: 2%;
         }
         .title{
-            font-size:32px;
-            height: 48px;
+            font-size:0.426667rem;
+            height: 0.64rem;
             width: 40%;
             text-align:center;
         }
         .profit{
-            font-size:26px;
-            height: 48px;
-            line-height: 48px;
+            font-size:0.346667rem;
+            height: 0.64rem;
+            line-height: 0.64rem;
             width: 15%;
             text-align:center;
         }
         .edit{
-            font-size:26px;
-            height: 48px;
-            line-height: 48px;
+            font-size:0.346667rem;
+            height: 0.64rem;
+            line-height: 0.64rem;
             width: 15%;
             text-align:center;
         }
     }
     .logintip{
-        height: 90px;
+        height: 1.2rem;
         background-color: rgba(35,35,33,.8);
-        padding:0 90px 30px;
+        padding:0 1.2rem 0.4rem;
         color:#fff;
         display:flex;
-        line-height: 90px;
-        font-size:26px;
+        line-height: 1.2rem;
+        font-size:0.346667rem;
         align-items:center;
         .txt{
-            height: 48px;
+            height: 0.64rem;
         }
         .tologin{
-            margin-left:20px;
-            height: 48px;
-            padding:0 24px 0 10px;
+            margin-left:0.266667rem;
+            height: 0.64rem;
+            padding:0 0.32rem 0 0.133333rem;
         }
     }
     .shopcar_main{
@@ -57,11 +57,11 @@
         background-color: #f4f4f1;
         .car_list{
             .list_item{
-                margin:10px 10px 0 10px;
+                margin:0.133333rem 0.133333rem 0 0.133333rem;
                 background-color: #FFF;
                 display:flex;
                 align-items:center;
-                padding:30px;
+                padding:0.4rem;
                 .list_cont{
                     width: 100%;
                     display:flex;
@@ -76,26 +76,26 @@
                         }
                         .listInput{
                             background-color:#fff;
-                            border:1px solid rgba(0,0,0,0.2);
+                            border:0.053333rem solid rgba(0,0,0,0.2);
                             border-radius:100%;
                             display:inline-block;
-                            height:30px;
-                            margin-right:10px;
-                            margin-top:-1px;
+                            height:0.4rem;
+                            margin-right:0.133333rem;
+                            margin-top:-0.013333rem;
                             vertical-align:middle;
-                            width:30px;
+                            width:0.4rem;
                             line-height:1;
                         }
                         .list_input:checked + .listInput:after{
                             background-color:#3e3e3e;
                             border-radius:100%;content:"";
                             display:inline-block;
-                            height:22px;margin:3px;
-                            width:22px;
+                            height:0.293333rem;
+                            width:0.293333rem;
                         }
                     }
                     img{
-                        margin-right: 40px;
+                        margin-right: 0.533333rem;
                     }
                     .cont{
                         position:relative;
@@ -112,7 +112,7 @@
                             margin-top: 0.4rem;
                         }
                         .price{
-                            margin-top: 45px;
+                            margin-top: 0.6rem;
                             span{
                                 font-size: 0.42667rem;
                             }
@@ -123,29 +123,29 @@
                             bottom:0;
                         }
                         .edit-qty{
-                            margin-bottom: -5px;
+                            margin-bottom: -0.066667rem;
                             .reduce{
                                 display:inline-block;
-                                width: 36px;
-                                height: 20px;
+                                width: 0.48rem;
+                                height: 0.266667rem;
                                 background: url("//static.360buyimg.com/tp-statics/2018-5-25/m/img/button_reduce_normal@2x.png") 0 no-repeat;
                                 -webkit-background-size: .26667rem .26667rem;
                                 background-size: .26667rem .26667rem;
                             }
                             .add{
                                 display:inline-block;
-                                width: 36px;
-                                height: 20px;
+                                width: 0.48rem;
+                                height: 0.266667rem;
                                 background: url("//static.360buyimg.com/tp-statics/2018-5-25/m/img/button_add_normal@2x.png") right no-repeat;
                                 -webkit-background-size: .26667rem .26667rem;
                                 background-size: .26667rem .26667rem;
                             }
                             input{
                                 display: inline-block;
-                                border:1px solid #000;
-                                width: 50px;
-                                height: 50px;
-                                line-height: 50px;
+                                border:0.013333rem solid #000;
+                                width: 0.666667rem;
+                                height: 0.666667rem;
+                                line-height: 1;
                                 text-align: center;
                                 font-size: .32rem;
                                 color: #333;
@@ -159,21 +159,21 @@
             img{width: 100%;}
         }
         .empty{
-            padding:220px 0 160px 0;
+            padding:2.933333rem 0 2.133333rem 0;
             text-align:center;
             .null{
-                width: 144px;
-                height: 114px;
+                width: 1.92rem;
+                height: 1.52rem;
                 margin:0 auto;
                 background: url("//static.360buyimg.com/tp-statics/2018-5-30/m/img/cart-null.png") no-repeat 50%;
             }
             .txt_tip{
-                margin-top: 40px;
+                margin-top: 0.533333rem;
             }
         }
     }
     .shopcar_footer{
-        height: 100px;
+        height: 1.333333rem;
         display:flex;
         background-color: #232321;
         justify-content:space-between;
@@ -184,24 +184,24 @@
             }
             .listInput{
                 background-color:#fff;
-                border:4px solid rgba(0,0,0,0.4);
+                border:0.053333rem solid rgba(0,0,0,0.4);
                 border-radius:100%;
                 display:inline-block;
-                height:30px;
-                margin-right:10px;
-                margin-top:-1px;
+                height:0.4rem;
+                margin-right:0.133333rem;
+                margin-top:-0.013333rem;
                 vertical-align:middle;
-                width:30px;
+                width:0.4rem;
                 line-height:1;
-                margin-left: 30px;
+                margin-left: 0.4rem;
                 z-index:10;
             }
             .list_input:checked + .listInput:after{
                 background-color:#c0a369;
                 border-radius:100%;content:"";
                 display:inline-block;
-                height:18px;margin:2px;
-                width:18px;
+                height:0.293333rem;
+                width:0.293333rem;
             }
             .all_check{
                 color:#fff;
@@ -211,7 +211,7 @@
             color:#fff;
             .pay{
                 span{
-                    font-size:32px;
+                    font-size:0.426667rem;
                 }
             }
         }
@@ -219,8 +219,8 @@
             width:30%;
             color:#000;
             text-align:center;
-            line-height: 100px;
-            font-size:32px;
+            line-height: 1.333333rem;
+            font-size:0.426667rem;
             border:0 none;
             padding:0;
         }
@@ -242,31 +242,31 @@
             position: absolute;
             top: 40%;
             bottom: 0;
-            width: 500px;
-            height: 250px;
+            width: 6.666667rem;
+            height: 3.333333rem;
             left: 50%;
             margin-left: -3.333333rem;
             text-align: center;
             border-radius: .21333rem;
             background-color: #fff;
             .tip{
-                height: 150px;
-                line-height: 150px;
-                font-size:28px;
+                height: 2.0rem;
+                line-height: 2.0rem;
+                font-size:0.373333rem;
             }
             .select{
-                border-top:1px solid #ccc;
+                border-top:0.013333rem solid #ccc;
                 width: 100%;
-                height: 100px;
+                height: 1.333333rem;
                 display:flex;
                 align-items:center;
                 .cancel{
-                    border-right:1px solid #ccc;
+                    border-right:0.013333rem solid #ccc;
                 }
                 span{
                     display: block;
                     flex:1;
-                    font-size:28px;
+                    font-size:0.373333rem;
                 }
             }
         }
