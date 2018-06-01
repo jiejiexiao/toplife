@@ -8,7 +8,7 @@
                 "name" : "女士双排扣垂褶夹克 黑色 黑色 38",
                 "brandName" : "ALEXANDER MCQUEEN",
                 "type" : "女士",
-                "price" : "23,700",
+                "price" : 23700,
                 "pic" : "https://img11.360buyimg.com/n1/s500x500_jfs/t17614/286/2241316212/125094/52993a2d/5aec0c0dNf7202f70.jpg"
             },
             {
@@ -17,7 +17,7 @@
                 "name" : "比基尼泳装 松石绿 国际通用码",
                 "brandName" : "MARY KATRANTZOU",
                 "type" : "女士",
-                "price" : "2,150",
+                "price" : 2150,
                 "pic" : "https://img12.360buyimg.com/n1/s500x500_jfs/t19033/83/2620454384/192859/d867fff4/5b0165f0N0f7c71fe.jpg"
             },
             {
@@ -26,7 +26,7 @@
                 "name" : "女士宽松连衣裙  黑色 美国尺码",
                 "brandName" : "DEREK LAM 10 CROSBY",
                 "type" : "女士",
-                "price" : "4,690",
+                "price" : 4690,
                 "pic" : "https://img10.360buyimg.com/n1/s500x500_jfs/t19321/231/2468400632/245238/14b6642e/5afa85aeN2830a8f8.jpg"
             }
         ]
@@ -40,7 +40,7 @@
                 "name" : "男士棉质斜纹修身衬衫 淡蓝色 意大利尺码",
                 "brandName" : "CANAL",
                 "type" : "男士",
-                "price" : "2,200",
+                "price" : 2200,
                 "pic" : "https://img11.360buyimg.com/n1/s500x500_jfs/t19141/274/630562787/168404/e48057a1/5a9d110aN5ceece3e.jpg"
             },
             {
@@ -49,7 +49,7 @@
                 "name" : "男士Skull刺绣T恤 黑色 标准码 黑色 S",
                 "brandName" : "ALEXANDER MCQUEEN",
                 "type" : "男士",
-                "price" : "1,740",
+                "price" : 1740,
                 "pic" : "https://img12.360buyimg.com/n1/s500x500_jfs/t14641/327/1764932211/209766/285af1a7/5a570f55N9e297fd2.jpg"
             },
             {
@@ -58,7 +58,7 @@
                 "name" : "男士丝棉弹力休闲裤 卡其色 意大利尺码",
                 "brandName" : "CANALI",
                 "type" : "男士",
-                "price" : "3,500",
+                "price" : 3500,
                 "pic" : "https://img14.360buyimg.com/n1/s500x500_jfs/t16054/118/2138825974/114069/3cd6f70b/5a9d0bddN5fa81b1b.jpg"
             }
         ]
@@ -72,7 +72,7 @@
                 "name" : "男士 FF RELOADED 皮革凉鞋 棕色 美国码 棕色 5",
                 "brandName" : "FENDI",
                 "type" : "鞋履",
-                "price" : "8,080",
+                "price" : 8080,
                 "pic" : "https://img14.360buyimg.com/n1/s500x500_jfs/t21607/241/93764845/400059/fc269d47/5afbb26eN969d5695.jpg"
             },
             {
@@ -81,7 +81,7 @@
                 "name" : "#包先生推荐# 女士H320系列运动鞋 白色 白色 39",
                 "brandName" : "HOGAN",
                 "type" : "鞋履",
-                "price" : "2,460",
+                "price" : 2460,
                 "pic" : "https://img10.360buyimg.com/n1/s500x500_jfs/t18772/148/2530742504/112786/b88cf05/5af9323aNa4386bff.jpg"
             },
             {
@@ -90,7 +90,7 @@
                 "name" : "女士牛皮运动鞋  白色 白色 39",
                 "brandName" : "TOD'S",
                 "type" : "鞋履",
-                "price" : "2,460",
+                "price" : 2460,
                 "pic" : "https://img10.360buyimg.com/n1/s500x500_jfs/t18772/148/2530742504/112786/b88cf05/5af9323aNa4386bff.jpg"
             }
         ]
@@ -104,7 +104,7 @@
                 "name" : "女士 FF RELOADED 小号RUNAWAY手袋 棕色 棕色",
                 "brandName" : "FENDI",
                 "type" : "手袋",
-                "price" : "22,580",
+                "price" : 22580,
                 "pic" : "https://img13.360buyimg.com/n1/s500x500_jfs/t19852/327/562223992/319442/d71aaf39/5afbb3c0N4722a08c.jpg",
                 "imgs" : []
             },
@@ -114,7 +114,7 @@
                 "name" : "#中国限量款#小号KATE丝绒红色手提包 红色",
                 "brandName" : "SAINT LAURENT",
                 "type" : "手袋",
-                "price" : "15,500",
+                "price" : 15500,
                 "pic" : "https://img13.360buyimg.com/n1/s500x500_jfs/t18964/115/2148045467/170475/33677496/5aea66e9N30712c48.jpg"
             },
             {
@@ -123,7 +123,7 @@
                 "name" : "女士小牛皮珠饰单肩包 黑色 黑色",
                 "brandName" : "ALEXANDER MCQUEEN",
                 "type" : "手袋",
-                "price" : "17,900",
+                "price" : 17900,
                 "pic" : "https://img11.360buyimg.com/n1/s500x500_jfs/t16942/253/1777540840/258834/ec03aad2/5ad731cdN1a44f727.jpg"
             }
         ]
@@ -137,7 +137,7 @@
                 "name" : "TREFLE系列 吊坠（配项链）",
                 "brandName" : "GOOSSENS",
                 "type" : "配饰",
-                "price" : "3,300",
+                "price" : 3300,
                 "pic" : "https://img12.360buyimg.com/n1/s500x500_jfs/t18985/315/2451374815/129446/60b04731/5af943aaN9b1d5b18.jpg"
             },
             {
@@ -146,7 +146,7 @@
                 "name" : "YSL黑色皮革信用卡包",
                 "brandName" : "SAINT LAURENT",
                 "type" : "配饰",
-                "price" : "1,690",
+                "price" : 1690,
                 "pic" : "https://img10.360buyimg.com/n1/s500x500_jfs/t19591/264/442679212/210449/7e30865b/5a7aa61aN98e77c3d.jpg"
             },
             {
@@ -155,7 +155,7 @@
                 "name" : "Calypso系列手镯 海藍色",
                 "brandName" : "ATELIER SWAROVSKI",
                 "type" : "配饰",
-                "price" : "3,490",
+                "price" : 3490,
                 "pic" : "https://img11.360buyimg.com/n1/s500x500_jfs/t19789/349/1251275925/124907/c3176ad7/5ac0e97dNa4291ee9.jpg"
             }
         ]
@@ -169,7 +169,7 @@
                 "name" : "男士帆布双肩包黑色（支持刻字） 黑色",
                 "brandName" : "TUMI",
                 "type" : "生活",
-                "price" : "6,100",
+                "price" : 6100,
                 "pic" : "https://img14.360buyimg.com/n1/s500x500_jfs/t17644/358/2460435320/202539/9e2fec89/5af58e74N3b352be8.jpg"
             },
             {
@@ -178,7 +178,7 @@
                 "name" : "当下”腕表 哑白色 哑白色",
                 "brandName" : "ALANCHAN CREATIONS",
                 "type" : "生活",
-                "price" : "1,800",
+                "price" : 1800,
                 "pic" : "https://img10.360buyimg.com/n1/s500x500_jfs/t17164/344/1512498000/145517/54f906e9/5acc5d81N91e861c9.jpg"
             },
             {
@@ -187,7 +187,7 @@
                 "name" : "连体泳装 红色 国际通用码",
                 "brandName" : "MARY KATRANTZOU",
                 "type" : "生活",
-                "price" : "2,838",
+                "price" : 2838,
                 "pic" : "https://img11.360buyimg.com/n1/s500x500_jfs/t22081/182/191968298/399439/9e5c08c0/5b0167cbN17b033db.jpg"
             }
         ]

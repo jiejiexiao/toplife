@@ -43,7 +43,7 @@
         </div>
         <div class="shopcar_footer">
             <label class="list_label">
-                <input class="list_input" v-on:click="chooseAll" type="checkbox" name="checkbox1" v-model="selected.length==shopcar_data.length">
+                <input class="list_input" v-on:click="chooseAll" type="checkbox" name="checkbox1" :checked="selected.length==shopcar_data.length">
                 <span class="checkbox listInput"></span>
                 <span class="all_check">全选</span>   
             </label>
@@ -138,7 +138,9 @@
                 e.target.previousElementSibling.value=parseInt(e.target.previousElementSibling.value)+1;
             },
             createOrder(){
-                
+                this.$store.state.orderData.total_qty=this.totalqty;
+                this.$store.state.orderData.total_price=this.totalprice;
+                this.$store.state.orderData.shopcar_goods=this.selected;
             },
             del_pro(){
                 this.del=true;

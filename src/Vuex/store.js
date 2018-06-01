@@ -13,6 +13,7 @@ let state = {
     keepUserStauts:{},
     brandsData:{},
     detailListObj:{},
+    orderData:{}
 }
 
 let mutations = {

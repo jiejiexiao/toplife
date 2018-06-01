@@ -6,7 +6,7 @@
                 <div class="title">分类</div>
                 <div class="btn btn_cartAndsearch">
                     <img src="http://static.360buyimg.com/tp-statics/images/homeTop/icon_fold_search.png"/>
-                    <img src="http://static.360buyimg.com/tp-statics/images/homeTop/shoppingbag.png"/>
+                    <img src="http://static.360buyimg.com/tp-statics/images/homeTop/shoppingbag.png" @click="$router.push('/shopcar')"/>
                 </div>
             </header>
             <main   class="classify_main" 
