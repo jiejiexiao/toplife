@@ -43,7 +43,7 @@
         </div>
         <div class="shopcar_footer">
             <label class="list_label">
-                <input class="list_input" v-on:click="chooseAll" type="checkbox" name="checkbox1" v-model="this.selected.length==this.shopcar_data.length">
+                <input class="list_input" v-on:click="chooseAll" type="checkbox" name="checkbox1" v-model="selected.length==shopcar_data.length">
                 <span class="checkbox listInput"></span>
                 <span class="all_check">全选</span>   
             </label>
@@ -51,10 +51,10 @@
                 <div class="pay">共计：￥<span>{{totalprice}}</span></div>
                 <div class="tip">不含运费</div>
             </div>
-            <button class="toOrder" v-if="NoEdit" :disabled="this.selected.length == 0" :class="{check: this.selected.length > 0, nocheck: this.selected.length== 0}" @click="createOrder">
+            <button class="toOrder" v-if="NoEdit" :disabled="selected.length == 0" :class="{check: selected.length > 0, nocheck: selected.length== 0}" @click="createOrder">
                 去结算<span class="num">({{totalqty}})</span>
             </button>
-            <button class="toOrder del" v-else :disabled="this.selected.length == 0" :class="{check: this.selected.length > 0, nocheck: this.selected.length== 0}" @click="del_pro"> 
+            <button class="toOrder del" v-else :disabled="selected.length == 0" :class="{check: selected.length > 0, nocheck: selected.length== 0}" @click="del_pro"> 
                 删除
             </button>
         </div>
@@ -104,12 +104,11 @@
                 window.history.back();
             },
             chooseAll:function(event){
-                var oThis = this;
-                oThis.selected = [];
-                if (event.currentTarget.checked) {
-                    oThis.shopcar_data.forEach(function(item,index) {
-                        oThis.selected.push(item.product_id);
-                    });
+                this.selected = [];
+                if (event.currentTarget.checked){
+                    for(let i=0;i<this.shopcar_data.length;i++){
+                        this.selected.push(this.shopcar_data[i]);
+                    }
                 }
             },
             edit(){
@@ -149,7 +148,9 @@
                     for(let i=0;i<this.selected.length;i++){
                         http.post('del_shop_cart',{product_id:this.selected[i]['_id']}).then((res)=>{
                             if(res.status){
-
+                                http.post('showShopcart').then((res)=>{
+                                    this.shopcar_data=res.data;
+                                })
                             }
                         })
                     } 
