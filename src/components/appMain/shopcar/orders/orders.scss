@@ -36,51 +36,282 @@
         height: 100%;
       
         width: 100%;
-        padding: 0 20px;
+        padding: 0 0.2667rem;
         text-align: center;
-
-       
         overflow-x: hidden;
         h2{
-            line-height: 110px;
+            line-height: 1.4667rem;
             align-self: center;
             font-family: "宋体";
         }
         .order_second{
-            height: 426px;
+            height: 5.68rem;
             width: 100%;
-            padding: 0 40px;
+            padding: 0 0.5333rem;
             background-color: white;
-            margin-bottom: 20px;
+            margin-bottom: 0.2667rem;
             .order_second_top{
-                height: 204px;
-                border-bottom: 1px solid #878787;
+                display: flex;
+                justify-content: space-between;
+                line-height: 2.72rem;
+                height: 2.72rem;
+                border-bottom: 0.0133rem solid #878787;
+                .order_second_main{
+                    width: 5.1333rem;
+                    padding-top: 0.2667rem;
+                    height: 2.7333rem;
+                    h2{
+                        line-height: 0.6667rem;
+                        display: flex;
+                        justify-content:space-between;
+                      
+                        font-size: 0.2933rem;
+                        padding-right: 0.6667rem;    
+                        i{
+                            display: inline-block;
+                            width: 0.5867rem;
+                            margin-top: 0.1333rem;
+                            height: 0.48rem;
+                            background-color: #212121;
+                            color: white;
+                            line-height: 0.48rem;
+                            font-size: 0.2133rem;
+                        }
+
+                    }
+                    p{
+                        display: flex;
+                        text-align: left;
+                        line-height: 0.5333rem;
+                        font-size: 0.2933rem;
+                        color: #979797;
+                    }
+                }
+                i{
+                    font-size: 0.7067rem;
+                }
             }
             .order_second_bottom{
-                height: 220px;
-                background-color: forestgreen;
+                height: 2.9333rem;
+                padding-top: 0.5333rem;
+                .order_second_miant{
+                    height: 1.84rem;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: #F8F8F8;
+                    p{
+                        align-self: center;
+                    }
+                    span{
+                        align-self: center;
+                    }
+                    a{
+                        align-self: center;
+                        i{ 
+                            font-size: 0.7067rem;
+                        }
+                    }
+                }
             }
         }
       .order_three{
-          height: 580px;
+          height: 5.6267rem;
           background-color: white;
+          padding-top: 0.8rem;
+          padding: 0 0.5333rem;
+          .order_mian{
+              display: flex;
+              height: 4.1333rem;
+              padding-top: 0.4667rem;
+              padding-bottom: 0.5333rem;
+             
+              border-bottom: 0.0133rem solid #D6D6D6;
+              .order_mian_l{
+                  width: 6.1333rem;
+                  height: 100%;
+                  overflow-y:hidden;
+           
+                  padding-top: 0.32rem;
+                  
+                    ul{
+                        // width: 8rem;
+                        display: flex;
+                        
+                        li{
+                            width: 2.8rem;
+                            position: relative;
+                           
+                            margin-right: 0.2667rem;
+                            img{
+                                width: 2.8rem;
+                                height: 2.8rem;
+                            }
+                            span{
+                                display: inline-block;
+                                position: absolute;
+                                bottom: 0;
+                                height: 0.6667rem;
+                                width: 100%;
+    
+                              background-color: rgba($color: #000000, $alpha: 0.5);
+                                left: 0;
+                                line-height: 0.6667rem;
+                                color: white;
+                            }
+                        }
+                    }
+              }
+              .order_mian_r{
+                  width: 2.2667rem;
+                  display: flex;
+                  justify-content: space-between;
+                  line-height: 3.12rem;
+                  padding-left: 0.3733rem;
+                  font-size: 0.3333rem;
+                  height: 100%;
+                 
+                  i{
+                    font-weight: bold;
+                  }
+                  a{
+                      i{
+                          font-size: 0.5333rem;
+                          color: #6E6E6E;
+                      }
+                  }
+              }
+          }
+          h2{
+              line-height: 1.4667rem;
+              display: flex;
+              justify-content: space-between;
+              font-size: 0.3333rem;
+             
+              span{
+                  color: #969696;
+                  i{
+                   color:#1E1E1C;
+                  }
+              }
+              
+            
+            
+            }
+
+
       }
-      .order_four{
-          height: 395px;
-          background-color: white;
-      }
+     
       .order_five{
         background-color: white;
-        height: 466px;
+        height: 6.2133rem;
+        padding:0.5333rem 0.5333rem;
+        
+        h2{
+            line-height: 1.4667rem;
+            display: flex;
+            justify-content: space-between;
+            background-color: #F8F8F8;
+            margin-bottom: 0.2667rem;
+            font-size: 0.32rem;
+            padding-left: 0.2667rem;
+            span{
+                i{
+                    margin-left: 1.2667rem;
+                    color: #8D8D8D;
+                }
+            }
+            a{
+                i{
+                    font-size: 0.7067rem;
+                }
+            }
+           
+        }
       }
       .order_six{
-          height: 270px;
+          height: 3.6rem;
+          font-family: "宋体";
+          padding: 0 0.5333rem;
           background-color: white;
-          margin-bottom: 70px;
-      }
+          margin-bottom: 0.9333rem;
+            .order_six_top{
+                height: 1.96rem;
+                padding-top: 0.5333rem;
+                border-bottom: 0.0133rem solid #EBEBEB;
+                h3,h4{
+                    display: flex;
+                    color: #BFBFBF;
+                    padding-left: 0.2667rem;
+                    justify-content: space-between;
+                    line-height: 0.76rem;
+                    font-size: 0.32rem;
+                }
+                h4{
+                    padding-left: 0.9333rem;
+                }
+            }
+            h2{
+                display: flex;
+                align-items: baseline;
+                justify-content: flex-end;
+                line-height: 0.8533rem;
+              
+                font-size: 0.2933rem;
+                margin-top: 0.4667rem;
+                vertical-align: bottom;
+               
+                span{
+                    font-size: 0.4667rem;
+                }
+            }
+         }
     }
     .orders_footer{
-        height: 104px;
+        height: 1.3867rem;
         background-color: #232321;
+        padding-left: 0.5333rem;
+        display: flex;
+        justify-content: space-between;
+
+        .orders_footer_l{
+            color: white;
+            font-family: "KaiTi";
+            height: 100%;
+            h2{
+                line-height: 0.8rem;
+                font-size: 0.4667rem;    
+            }
+            h5{
+                line-height: 0.6rem;
+                font-size: 0.3333rem;
+                margin: 0;
+            }
+        }
+        a{
+            display: inline-block;
+            width: 2.6667rem;
+            line-height:  1.3867rem;
+            height: 100%;
+            text-align: center;
+            font-size: 0.3733rem;
+            color: #232321;
+            background-color: #C0A369;
+        }
     }
+    h1{
+        font-family: "SimHei";
+        line-height: 72px;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        z-index: 555;
+        padding-left: 40px;
+        color: white;
+        font-size: 25px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        i{
+            font-size: 40px;
+        }
+    }
+
 }

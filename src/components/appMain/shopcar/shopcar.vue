@@ -141,6 +141,9 @@
                 this.$store.state.orderData.total_qty=this.totalqty;
                 this.$store.state.orderData.total_price=this.totalprice;
                 this.$store.state.orderData.shopcar_goods=this.selected;
+
+                this.$router.push('/orders')
+
             },
             del_pro(){
                 this.del=true;
