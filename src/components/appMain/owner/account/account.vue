@@ -8,7 +8,7 @@
         <div class="account_second">
             <div>
                 <img src="https://storage.360buyimg.com/i.imageUpload/6a645f3461616237653364633863613831343436333536373935343430_big.jpg" alt="">
-                <span>jd_131067nfr</span>
+                <span>{{this.$store.state.login.login_name}}</span>
             </div>
             <router-link to=""><i class="iconfont icon-arrow-right"></i></router-link>
         </div>

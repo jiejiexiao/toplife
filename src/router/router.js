@@ -29,7 +29,14 @@ import DetailListComponent from '../components/detailList/detailList.vue'
 //注册登录
 import LoginComponent from '../components/login/login.vue'
 import RegisterComponent from '../components/register/register.vue'
+
+//购物车
 import ShopcarComponent from '../components/appMain/shopcar/shopcar.vue'
+//订单页面
+import OrderComponent from '../components/appMain/shopcar/orders/orders.vue'
+
+
+
 const router = new VueRouter({
     routes : [
         {path:'/', redirect: '/appmain'},
@@ -44,6 +51,9 @@ const router = new VueRouter({
         {path:'/login', component: LoginComponent, name:'login'},
         {path:'/register', component: RegisterComponent, name: 'register'},
         {path:'/shopcar', component: ShopcarComponent, name: 'shopcar'},
+        //订单
+        {path:'/orders', component: OrderComponent, name: 'orders'},
+        
         {path:'/appmain/classroom/classroomshow/:order', component:ClassroomShowComponent, name:'classroomshow'},
         {path:'/goodlist/:key', component:GoodlistComponent, name:'goodlist'},
         {path:'/detailList', component:DetailListComponent, name:'detailList'},
