@@ -50,13 +50,7 @@
                     <span>共{{orders_new.total_qty}}件商品</span>
 
                     <span>小计：<i>￥{{orders_new.total_price}}</i></span>
-
-                   
-
                 </h2>
-
-
-
             </div>
       
              <h2>支付信息</h2>
@@ -100,10 +94,6 @@
             </div>
             <i class="icon-shanchu1  iconfont" v-show="show_paybox" @click="should_pay=false"></i>
         </div>
-
-
-
-
     </div>
 </template>
 
@@ -126,9 +116,6 @@ export default {
       show_paybox:false,
       order_id:'',
       show_sure:true
-    
-
-
     };
   },
   mounted() {
@@ -181,8 +168,9 @@ export default {
           //滑动解锁
         var slider = new SliderUnlock("#slider", {}, ()=>{
             //滑动完成后的回调
-            http.post('showOrder',{order_id: this.show_paybox}).then((res)=>{
+            http.post('showOrder',{order_id: this.order_id}).then((res)=>{
                 if(res.status){
+                    this.$router.push({name:'payorder'});
                     //跳转
                     this.show_sure=true;
                     this.should_pay =false;
