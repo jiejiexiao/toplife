@@ -46,12 +46,12 @@
                         <i class="iconfont icon-shanchu1" @click="cancelOption"></i>
                     </div>
                 </div>
-                <div class="confirm" @click="confirmOption">确定</div>
-                <transition>
-                    <div class="imgMove"></div>
-                </transition>    
+                <div class="confirm" @click="confirmOption">确定</div>   
             </div>
         </transition>
+        <transition name="fademove">
+            <div class="imgMove" v-if="imgmoving"><img :src="currentObj['pic']"/></div>
+        </transition> 
     </div>
 </template>
 
@@ -65,6 +65,7 @@
             return{
                 activeIcon:false,
                 show:false,
+                imgmoving:false,
                 qty:1,
                 imgList:['//m.360buyimg.com/n1/s621x0_jfs/t16816/87/1508954740/475147/d05c6893/5accb4d3N5bb51449.jpg!q75.webp','//m.360buyimg.com/n1/s621x0_jfs/t19216/200/1485385007/218846/c9b46284/5accb4caNc364083a.jpg!q75.webp','//m.360buyimg.com/n1/s621x0_jfs/t19690/299/1520710554/268140/66695e4/5accb4cbN902dbf6c.jpg!q75.webp','//m.360buyimg.com/n1/s621x0_jfs/t17233/63/1454292433/322179/f5e2fd29/5accb4cdNb79f592c.jpg!q75.webp','//m.360buyimg.com/n1/s621x0_jfs/t19291/13/1509782828/336693/d070f6bd/5accb4ccN2f4a7359.jpg!q75.webp','//m.360buyimg.com/n1/s621x0_jfs/t17548/308/1514757814/387449/af8879de/5accb4d0Nca408a09.jpg!q75.webp']
             }
@@ -117,7 +118,11 @@
                 http.post('addToShopcart',{product_id: this.currentObj['_id'], qty: this.qty}).then((res) => {
                     if(res.status){
                         this.show = false;
-                        this.qty = 1;                          
+                        this.qty = 1; 
+                        this.imgmoving = true;    
+                        let timer = setTimeout(()=>{
+                            this.imgmoving = false;
+                        },500)                     
                     }
                   
                 })
