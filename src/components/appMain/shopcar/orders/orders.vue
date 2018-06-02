@@ -80,8 +80,8 @@
             <a href="javascript:void(0);" @click="go_pay">提交订单</a>
         </div>
 
-        <div class="overlay" v-if="should_pay" >
-            <div class="del_tip"  v-show="!show_paybox">
+        <div class="overlay" v-show="should_pay" >
+            <div class="del_tip"  v-show="show_sure">
                 <div class="tip">确认要支付订单吗？</div>
                 <div class="select">
                     <span class="cancel" @click="should_pay=false">取消</span>
@@ -94,7 +94,7 @@
                     <span id="lableTip">滑动完成支付</span>
                 </div>
             </div>
-            <i class="icon-shanchu1  iconfont" v-show="show_paybox"></i>
+            <i class="icon-shanchu1  iconfont" v-show="show_paybox" @click="should_pay=false"></i>
         </div>
 
 
@@ -120,7 +120,8 @@ export default {
       showdata: {},
       should_pay:false,
       show_paybox:false,
-      order_id:''
+      order_id:'',
+      show_sure:true
     
 
 
@@ -156,6 +157,9 @@ export default {
     },
     go_pay(){
         this.should_pay= true;
+          this.show_paybox=false;
+           this.show_sure=true
+    
     },
     creade_order(){
         let shopcar_goodsStr =JSON.stringify( this.orders_new.shopcar_goods);
@@ -163,6 +167,7 @@ export default {
           http.post('addToOrder',
           //生成订单
         {total_qty:this.orders_new.total_qty,total_price:this.orders_new.total_price,shopcar_goods:shopcar_goodsStr}).then((res)=>{
+            this.show_sure = false;
             if(res){
                 this.order_id = res.data;
             }else{
@@ -170,18 +175,16 @@ export default {
             }
         })
           //滑动解锁
-        var slider = new SliderUnlock("#slider", {}, function(){
+        var slider = new SliderUnlock("#slider", {}, ()=>{
             //滑动完成后的回调
             http.post('showOrder',{order_id: this.show_paybox}).then((res)=>{
                 if(res.status){
                     //跳转
-                    slider.reset();
+                    this.show_sure=true;
+                    this.should_pay =false;
+                      slider.reset();
                 }
             })
-
-
-
-           
         }, ()=>{});
         slider.init();
      

@@ -300,17 +300,17 @@
     }
     h1{
         font-family: "SimHei";
-        line-height: 72px;
+        line-height: 0.96rem;
         background-color: rgba($color: #000000, $alpha: 0.5);
         z-index: 555;
-        padding-left: 40px;
+        padding-left: 0.5333rem;
         color: white;
-        font-size: 25px;
+        font-size: 0.3333rem;
         overflow: hidden;
         white-space: nowrap;
         text-overflow:ellipsis;
         i{
-            font-size: 40px;
+            font-size: 0.5333rem;
         }
     }
     .overlay{
@@ -322,10 +322,10 @@
         background-color: rgba(0,0,0,.5);
         i{
             display: inline-block;
-            font-size: 70px;
+            font-size: 0.9333rem;
             position: absolute;
-            right: 30px;
-            top: 30px;
+            right: 0.4rem;
+            top: 0.4rem;
             font-weight: bold;
             color: white;
         }
@@ -364,7 +364,7 @@
         }
         
 #slide-wrapper{
-    width: 500px;
+    width: 6.6667rem;
     height: 3.333333rem;
     top: 40%;
     position: relative;
@@ -373,10 +373,10 @@
    
     margin: 0 auto;
     #slider{
-        height: 120px;
+        height: 1.6rem;
         width: 100%;
-        line-height: 120px;
-        font-size: 45px;
+        line-height: 1.6rem;
+        font-size: 0.6rem;
         position: relative;
         border-radius: .21333rem;
         background-color: #FDEB9C;
@@ -384,7 +384,7 @@
         text-align: center;
     
         #label{
-            width: 60px;
+            width: 0.8rem;
             border-radius: .21333rem;
             
             position: absolute;
@@ -404,7 +404,7 @@
     }    
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 8.5333rem) {
     #slide-wrapper{
         width: 64%;
     }
