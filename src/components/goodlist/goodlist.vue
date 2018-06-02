@@ -122,8 +122,12 @@
                 } else{
                     let prev = Math.floor(p/1000);
                     let back = p%1000;
-                    if(back == 0){
-                        back = '000';
+                    if(back < 10){
+                        back = '00'+back;
+                    } else if(back >= 10 && back < 100){
+                        back = '0'+back;
+                    } else {
+                        back = back;
                     }
                     return prev + ',' + back;
                 }

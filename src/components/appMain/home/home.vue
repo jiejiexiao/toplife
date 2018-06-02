@@ -170,7 +170,7 @@
         },
         mounted(){
             this.$store.commit('tabChange')
-            http.get('http://10.3.133.27:8080/src/assets/config/home.txt').then((res)=>{
+            http.get('http://localhost:8080/src/assets/config/home.txt').then((res)=>{
                 this.tab_cont=res;
                 for(let key in this.tab_cont){
                     this.new_tab.push(this.tab_cont[key]['tab_name']);
