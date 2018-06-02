@@ -1,6 +1,6 @@
 import axios from 'axios'
 import router from '../router/router'
-const baseUrl = 'http://192.168.0.126:66/'
+const baseUrl = 'http://192.168.191.1:66/'
 
 let filterUrl = (_url) => {
     if (_url && _url.startsWith('http')) {
