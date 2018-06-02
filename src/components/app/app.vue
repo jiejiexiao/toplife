@@ -8,12 +8,7 @@
         mounted(){
             this.$store.commit('getDataSet');
             this.$store.commit('set_Login');
-
-
-
-
-
-
+            this.$store.commit('showdata');
         }
     }
 </script>

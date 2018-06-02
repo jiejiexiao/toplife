@@ -286,8 +286,14 @@ export default {
             console.log(res)
             e.target.style.background = "green";
             e.target.innerHTML = "添加地址成功";
+            //添加成功后要触发showadderss的方法
+               this.$store.commit('showdata');            
             setTimeout(() => {
-              this.$router.push("/address");
+              if(this.$store.state.address.isorders){
+                  this.$router.push("/orders");
+              }else{
+                  this.$router.push("/address");
+              }
             }, 200);
           })
           .catch(error => {
