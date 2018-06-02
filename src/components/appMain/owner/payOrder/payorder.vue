@@ -22,13 +22,13 @@
                             </div>
                             <div class="price">
                                 ￥<span>3000</span>
-                                <span class="qty">*2</span>
+                                <span class="qty">&times;<i>2</i></span>
                             </div>   
                         </div>   
                     </div>
                     <div class="total">
-                        <span>去支付</span>
-                        <span>支付金额：￥<i>3000</i></span>
+                        <span class="goPay">去支付</span>
+                        <span class="pay">支付金额：￥<i class="pay_price">3000</i></span>
                     </div>
                 </div>
             </div>

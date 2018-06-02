@@ -64,9 +64,13 @@
                         position:relative;
                         width: 57%;
                         h3{
-                            font-size: 0.32rem;
+                            font-size:0.346667rem;
                             overflow: hidden;
-
+                            font-weight:500;
+                            margin-bottom: 0.2rem;
+                        }
+                        p{
+                            font-size:26px;
                         }
                         .tip{
                             span{
@@ -77,7 +81,7 @@
                             color:#999;
                         }
                         .price{
-                            margin-top: 0.6rem;
+                            margin-top:0.2rem;
                             span{
                                 font-size: 0.42667rem;
                             }
@@ -93,6 +97,17 @@
                     padding: 30px 0;
                     display:flex;
                     justify-content:space-between;
+                    .goPay{
+                        border:1px solid #000;
+                        padding:10px;
+                    }
+                    .pay{
+                        font-size:26px;
+                        .pay_price{
+                            color:#c0a369;;
+                            font-size:36px;
+                        }
+                    }
                 }
             }
         }

@@ -141,8 +141,8 @@
                 this.$store.state.orderData.total_qty=this.totalqty;
                 this.$store.state.orderData.total_price=this.totalprice;
                 this.$store.state.orderData.shopcar_goods=this.selected;
-
                 this.$router.push('/orders')
+
 
             },
             del_pro(){
@@ -153,9 +153,10 @@
                     for(let i=0;i<this.selected.length;i++){
                         http.post('del_shop_cart',{product_id:this.selected[i]['_id']}).then((res)=>{
                             if(res.status){
-                                http.post('showShopcart').then((res)=>{
-                                    this.shopcar_data=res.data;
-                                })
+                                this.shopcar_data.splice(i,1);
+                                // http.post('showShopcart').then((res)=>{
+                                //     this.shopcar_data=res.data;
+                                // })
                             }
                         })
                     } 
