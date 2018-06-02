@@ -13,10 +13,13 @@
             <router-link to=""><i class="iconfont icon-arrow-right"></i></router-link>
         </div>
         <div class="account_mian">
-                 <div class="del_comfig" v-show="del_box" >
-                    <div class="del_box">
-                        <h2> 确定要退出吗？</h2>
-                        <h3><span @click="sure_del">确定</span><span @click="del_box=false">取消</span></h3>
+                 <div class="overlay" v-show="del_box" >
+                    <div class="del_tip">
+                          <div class="tip">确认要删除吗？</div>
+                       <div class="select">
+                            <span @click="sure_del">确定</span>
+                            <span @click="del_box=false">取消</span>
+                        </div>
                     </div>
                 </div>
             <ul>

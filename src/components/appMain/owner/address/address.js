@@ -5,7 +5,9 @@ const state = {
     //要修改的地址
     address_state: {},
     addlist:[],
-    del_comfigs:false
+    del_comfigs:false,
+    //跳转的判断
+    isorders:false
 }
 
 const mutations = {
@@ -28,15 +30,12 @@ const actions = {
     },
     showdata:(store)=>{
         http.post('showAddress').then((res)=>{
-        
             store.state.addlist = res.data 
-            console.log(store.state.addlist)
-            
           })
     },
     //del删除
     del_addre(store,params){
-        console.log(params,555)
+       
         http.post('del_address',{address_id:params}).then((res)=>{
              store.state.addlist = res.status
              store.state.del_comfigs =false;

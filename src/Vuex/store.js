@@ -40,7 +40,15 @@ let mutations = {
             if(res.status){
                 this.state.login.login_name = res.data;
             }
-    })
+        })
+    },
+    //获取地址信息
+    showdata(){
+        http.post('showAddress').then((res)=>{
+            if(res.status){
+                this.state.address.addlist = res.data 
+            }
+          })
     },
     tabChange(){
         let name = window.location.hash.split('/');

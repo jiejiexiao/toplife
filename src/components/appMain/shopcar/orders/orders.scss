@@ -300,18 +300,123 @@
     }
     h1{
         font-family: "SimHei";
-        line-height: 72px;
+        line-height: 0.96rem;
         background-color: rgba($color: #000000, $alpha: 0.5);
         z-index: 555;
-        padding-left: 40px;
+        padding-left: 0.5333rem;
         color: white;
-        font-size: 25px;
+        font-size: 0.3333rem;
         overflow: hidden;
         white-space: nowrap;
         text-overflow:ellipsis;
         i{
-            font-size: 40px;
+            font-size: 0.5333rem;
         }
     }
+    .overlay{
+        position: fixed;
+        top: 0;
+        z-index:1000;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+        i{
+            display: inline-block;
+            font-size: 0.9333rem;
+            position: absolute;
+            right: 0.4rem;
+            top: 0.4rem;
+            font-weight: bold;
+            color: white;
+        }
+        .del_tip{
+        
+            position: absolute;
+            top: 40%;
+            bottom: 0;
+            width: 6.666667rem;
+            height: 3.333333rem;
+            left: 50%;
+            margin-left: -3.333333rem;
+            text-align: center;
+            border-radius: .21333rem;
+            background-color: #fff;
+            .tip{
+                height: 2.0rem;
+                line-height: 2.0rem;
+                font-size:0.373333rem;
+            }
+            .select{
+                border-top:0.013333rem solid #ccc;
+                width: 100%;
+                height: 1.333333rem;
+                display:flex;
+                align-items:center;
+                .cancel{
+                    border-right:0.013333rem solid #ccc;
+                }
+                span{
+                    display: block;
+                    flex:1;
+                    font-size:0.373333rem;
+                }
+            }
+        }
+        
+#slide-wrapper{
+    width: 6.6667rem;
+    height: 3.333333rem;
+    top: 40%;
+    position: relative;
+    padding-top: 10%;
+    border-radius: .21333rem;
+   
+    margin: 0 auto;
+    #slider{
+        height: 1.6rem;
+        width: 100%;
+        line-height: 1.6rem;
+        font-size: 0.6rem;
+        position: relative;
+        border-radius: .21333rem;
+        background-color: #FDEB9C;
+        overflow: hidden;
+        text-align: center;
+    
+        #label{
+            width: 0.8rem;
+            border-radius: .21333rem;
+            
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: #E67E22;
+            z-index: 999;
+            cursor: pointer;
+        }
+        #labelTip{
+            z-index: 9;
+        }
+    }
+    #slider.success{
+        background-color: #E5EE9F;
+    }    
+}
+
+@media screen and (max-width: 8.5333rem) {
+    #slide-wrapper{
+        width: 64%;
+    }
+}
+
+
+// 少时诵诗书所所是是是是是是是撒
+
+        
+        
+    }
+
+
 
 }
