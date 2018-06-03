@@ -372,7 +372,7 @@
     border-radius: .21333rem;
    
     margin: 0 auto;
-    #slider{
+    .slider{
         height: 1.6rem;
         width: 100%;
         line-height: 1.6rem;
@@ -382,9 +382,8 @@
         background-color: #FDEB9C;
         overflow: hidden;
         text-align: center;
-    
         #label{
-            width: 0.8rem;
+            width:1.111111rem;
             border-radius: .21333rem;
             
             position: absolute;
@@ -399,24 +398,18 @@
             z-index: 9;
         }
     }
-    #slider.success{
+    .slider.success{
         background-color: #E5EE9F;
     }    
 }
 
-@media screen and (max-width: 8.5333rem) {
-    #slide-wrapper{
-        width: 64%;
+    @media screen and (max-width: 640px) {
+        #slide-wrapper{
+            width: 64%;
+        }
     }
-}
-
-
-// 少时诵诗书所所是是是是是是是撒
-
-        
         
     }
-
 
 
 }

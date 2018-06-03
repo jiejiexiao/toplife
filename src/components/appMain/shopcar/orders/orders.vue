@@ -75,7 +75,8 @@
                 <h2>共计：￥{{orders_new.total_price}}</h2>
                 <h5>共{{orders_new.total_qty}}件商品</h5>
             </div>
-            <a href="javascript:void(0);" @click="go_pay">提交订单</a>
+            <a href="javascript:void(0);" v-if="!this.showdata['receiver']" @click="changepthan">请先添加地址</a>
+            <a href="javascript:void(0);" v-if="this.showdata['receiver']" @click="go_pay">提交订单</a>
         </div>
 
         <div class="overlay" v-show="should_pay" >
@@ -87,7 +88,7 @@
                 </div>
             </div>
             <div id="slide-wrapper" v-show="show_paybox">
-                <div id="slider">
+                <div class="slider">
                     <span id="label"></span>
                     <span id="lableTip">滑动完成支付</span>
                 </div>
@@ -166,21 +167,22 @@ export default {
             }
         })
           //滑动解锁
-        var slider = new SliderUnlock("#slider", {}, ()=>{
+        var slider = new SliderUnlock(".slider", {}, ()=>{
             //滑动完成后的回调
             http.post('showOrder',{order_id: this.order_id}).then((res)=>{
+                console.log(666,res)
                 if(res.status){
                     this.$router.push({name:'payorder'});
                     //跳转
                     this.show_sure=true;
                     this.should_pay =false;
-                      slider.reset();
                 }
+                  slider.reset();
             })
+       
         }, ()=>{});
         slider.init();
-     
-      
+        
     }
 
   }
