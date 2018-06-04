@@ -39,16 +39,16 @@
               <span></span>
               <ul>
                   <li>
-                      <router-link to=""> <i class="iconfont icon-daizhifudingdan"></i>待支付</router-link>
+                      <router-link to="/payorder"> <i class="iconfont icon-daizhifudingdan"></i>待支付</router-link>
                   </li>
                    <li>
-                      <router-link to=""> <i class="iconfont icon-icon-test"></i>待收货</router-link>
+                      <router-link to="/payorder"> <i class="iconfont icon-icon-test"></i>待收货</router-link>
                   </li>
                    <li>
-                      <router-link to=""> <i class="iconfont icon-wuyoushouhou"></i>维修/售后</router-link>
+                      <router-link to="/payorder"> <i class="iconfont icon-wuyoushouhou"></i>维修/售后</router-link>
                   </li>
                    <li>
-                      <router-link to=""> <i class="iconfont icon-dingdan"></i>所有订单</router-link>
+                      <router-link to="/payorder"> <i class="iconfont icon-dingdan"></i>所有订单</router-link>
                   </li>
                    <li>
                       <router-link  :to="this.$store.state.login.login_name != '' ? '/showlike' :'/login' " > <i class="iconfont icon-shoucang"></i>收藏夹</router-link>
@@ -58,7 +58,7 @@
           <div class="owner_fifth" v-show="showdata" >
               <h5>浏览记录</h5>
                 <ul>
-                  <li v-for="obj of watch_history" :key="obj.id">
+                  <li v-for="obj of watch_history" :key="obj.id"  @click=" turnDetail(obj)">
                       <router-link to="">
                           <img :src="obj.pic">
                           <h3>{{obj.brandName}}</h3>
@@ -118,6 +118,10 @@ export default {
             }else{
                  this.scroll_active=''
             }
+        },
+        turnDetail(obj){
+            this.$store.commit('setDetailObj',obj);
+            this.$router.push('/detailList');
         }
     }
 
